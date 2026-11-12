@@ -1,0 +1,4910 @@
+PROTEL NETLIST 2.0
+[
+DESIGNATOR
+RGB6
+FOOTPRINT
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+PARTTYPE
+Yo-WS2812B-3528反贴雾状
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Designator
+RGB6
+LCSC Part Name
+Yo-WS2812B-3528反贴雾状
+Supplier Part
+C9900003682
+Manufacturer
+
+Manufacturer Part
+Yo-WS2812B-3528反贴雾状
+Supplier Footprint
+LED-SMD_L3.2-W2.8-BR_DY-S35281
+JLCPCB Part Class
+扩展库
+Datasheet
+https://atta.szlcsc.comnull
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Name
+Yo-WS2812B-3528反贴雾状
+Description
+
+Unique ID
+gge9
+Reuse Block
+
+Group ID
+
+Channel ID
+$3e779
+Device
+Yo-WS2812B-3528反贴雾状
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+RGB2
+FOOTPRINT
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+PARTTYPE
+Yo-WS2812B-3528反贴雾状
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Designator
+RGB2
+LCSC Part Name
+Yo-WS2812B-3528反贴雾状
+Supplier Part
+C9900003682
+Manufacturer
+
+Manufacturer Part
+Yo-WS2812B-3528反贴雾状
+Supplier Footprint
+LED-SMD_L3.2-W2.8-BR_DY-S35281
+JLCPCB Part Class
+扩展库
+Datasheet
+https://atta.szlcsc.comnull
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Name
+Yo-WS2812B-3528反贴雾状
+Description
+
+Unique ID
+gge5
+Reuse Block
+
+Group ID
+
+Channel ID
+$3e105
+Device
+Yo-WS2812B-3528反贴雾状
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+RGB3
+FOOTPRINT
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+PARTTYPE
+Yo-WS2812B-3528反贴雾状
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Designator
+RGB3
+LCSC Part Name
+Yo-WS2812B-3528反贴雾状
+Supplier Part
+C9900003682
+Manufacturer
+
+Manufacturer Part
+Yo-WS2812B-3528反贴雾状
+Supplier Footprint
+LED-SMD_L3.2-W2.8-BR_DY-S35281
+JLCPCB Part Class
+扩展库
+Datasheet
+https://atta.szlcsc.comnull
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Name
+Yo-WS2812B-3528反贴雾状
+Description
+
+Unique ID
+gge6
+Reuse Block
+
+Group ID
+
+Channel ID
+$3e611
+Device
+Yo-WS2812B-3528反贴雾状
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+RGB4
+FOOTPRINT
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+PARTTYPE
+Yo-WS2812B-3528反贴雾状
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Designator
+RGB4
+LCSC Part Name
+Yo-WS2812B-3528反贴雾状
+Supplier Part
+C9900003682
+Manufacturer
+
+Manufacturer Part
+Yo-WS2812B-3528反贴雾状
+Supplier Footprint
+LED-SMD_L3.2-W2.8-BR_DY-S35281
+JLCPCB Part Class
+扩展库
+Datasheet
+https://atta.szlcsc.comnull
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Name
+Yo-WS2812B-3528反贴雾状
+Description
+
+Unique ID
+gge7
+Reuse Block
+
+Group ID
+
+Channel ID
+$3e663
+Device
+Yo-WS2812B-3528反贴雾状
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+RGB5
+FOOTPRINT
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+PARTTYPE
+Yo-WS2812B-3528反贴雾状
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Designator
+RGB5
+LCSC Part Name
+Yo-WS2812B-3528反贴雾状
+Supplier Part
+C9900003682
+Manufacturer
+
+Manufacturer Part
+Yo-WS2812B-3528反贴雾状
+Supplier Footprint
+LED-SMD_L3.2-W2.8-BR_DY-S35281
+JLCPCB Part Class
+扩展库
+Datasheet
+https://atta.szlcsc.comnull
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Name
+Yo-WS2812B-3528反贴雾状
+Description
+
+Unique ID
+gge8
+Reuse Block
+
+Group ID
+
+Channel ID
+$3e719
+Device
+Yo-WS2812B-3528反贴雾状
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+RGB7
+FOOTPRINT
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+PARTTYPE
+Yo-WS2812B-3528反贴雾状
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Designator
+RGB7
+LCSC Part Name
+Yo-WS2812B-3528反贴雾状
+Supplier Part
+C9900003682
+Manufacturer
+
+Manufacturer Part
+Yo-WS2812B-3528反贴雾状
+Supplier Footprint
+LED-SMD_L3.2-W2.8-BR_DY-S35281
+JLCPCB Part Class
+扩展库
+Datasheet
+https://atta.szlcsc.comnull
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Name
+Yo-WS2812B-3528反贴雾状
+Description
+
+Unique ID
+gge10
+Reuse Block
+
+Group ID
+
+Channel ID
+$3e843
+Device
+Yo-WS2812B-3528反贴雾状
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+RGB8
+FOOTPRINT
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+PARTTYPE
+Yo-WS2812B-3528反贴雾状
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Designator
+RGB8
+LCSC Part Name
+Yo-WS2812B-3528反贴雾状
+Supplier Part
+C9900003682
+Manufacturer
+
+Manufacturer Part
+Yo-WS2812B-3528反贴雾状
+Supplier Footprint
+LED-SMD_L3.2-W2.8-BR_DY-S35281
+JLCPCB Part Class
+扩展库
+Datasheet
+https://atta.szlcsc.comnull
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Name
+Yo-WS2812B-3528反贴雾状
+Description
+
+Unique ID
+gge11
+Reuse Block
+
+Group ID
+
+Channel ID
+$3e911
+Device
+Yo-WS2812B-3528反贴雾状
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+RGB9
+FOOTPRINT
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+PARTTYPE
+Yo-WS2812B-3528反贴雾状
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Designator
+RGB9
+LCSC Part Name
+Yo-WS2812B-3528反贴雾状
+Supplier Part
+C9900003682
+Manufacturer
+
+Manufacturer Part
+Yo-WS2812B-3528反贴雾状
+Supplier Footprint
+LED-SMD_L3.2-W2.8-BR_DY-S35281
+JLCPCB Part Class
+扩展库
+Datasheet
+https://atta.szlcsc.comnull
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Name
+Yo-WS2812B-3528反贴雾状
+Description
+
+Unique ID
+gge12
+Reuse Block
+
+Group ID
+
+Channel ID
+$3e983
+Device
+Yo-WS2812B-3528反贴雾状
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+RGB10
+FOOTPRINT
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+PARTTYPE
+Yo-WS2812B-3528反贴雾状
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Designator
+RGB10
+LCSC Part Name
+Yo-WS2812B-3528反贴雾状
+Supplier Part
+C9900003682
+Manufacturer
+
+Manufacturer Part
+Yo-WS2812B-3528反贴雾状
+Supplier Footprint
+LED-SMD_L3.2-W2.8-BR_DY-S35281
+JLCPCB Part Class
+扩展库
+Datasheet
+https://atta.szlcsc.comnull
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Name
+Yo-WS2812B-3528反贴雾状
+Description
+
+Unique ID
+gge13
+Reuse Block
+
+Group ID
+
+Channel ID
+$3e1059
+Device
+Yo-WS2812B-3528反贴雾状
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+RGB11
+FOOTPRINT
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+PARTTYPE
+Yo-WS2812B-3528反贴雾状
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Designator
+RGB11
+LCSC Part Name
+Yo-WS2812B-3528反贴雾状
+Supplier Part
+C9900003682
+Manufacturer
+
+Manufacturer Part
+Yo-WS2812B-3528反贴雾状
+Supplier Footprint
+LED-SMD_L3.2-W2.8-BR_DY-S35281
+JLCPCB Part Class
+扩展库
+Datasheet
+https://atta.szlcsc.comnull
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Name
+Yo-WS2812B-3528反贴雾状
+Description
+
+Unique ID
+gge14
+Reuse Block
+
+Group ID
+
+Channel ID
+$3e1139
+Device
+Yo-WS2812B-3528反贴雾状
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+RGB12
+FOOTPRINT
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+PARTTYPE
+Yo-WS2812B-3528反贴雾状
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Designator
+RGB12
+LCSC Part Name
+Yo-WS2812B-3528反贴雾状
+Supplier Part
+C9900003682
+Manufacturer
+
+Manufacturer Part
+Yo-WS2812B-3528反贴雾状
+Supplier Footprint
+LED-SMD_L3.2-W2.8-BR_DY-S35281
+JLCPCB Part Class
+扩展库
+Datasheet
+https://atta.szlcsc.comnull
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Name
+Yo-WS2812B-3528反贴雾状
+Description
+
+Unique ID
+gge15
+Reuse Block
+
+Group ID
+
+Channel ID
+$3e1175
+Device
+Yo-WS2812B-3528反贴雾状
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+RGB13
+FOOTPRINT
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+PARTTYPE
+Yo-WS2812B-3528反贴雾状
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Designator
+RGB13
+LCSC Part Name
+Yo-WS2812B-3528反贴雾状
+Supplier Part
+C9900003682
+Manufacturer
+
+Manufacturer Part
+Yo-WS2812B-3528反贴雾状
+Supplier Footprint
+LED-SMD_L3.2-W2.8-BR_DY-S35281
+JLCPCB Part Class
+扩展库
+Datasheet
+https://atta.szlcsc.comnull
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Name
+Yo-WS2812B-3528反贴雾状
+Description
+
+Unique ID
+gge16
+Reuse Block
+
+Group ID
+
+Channel ID
+$3e1211
+Device
+Yo-WS2812B-3528反贴雾状
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+RGB14
+FOOTPRINT
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+PARTTYPE
+Yo-WS2812B-3528反贴雾状
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Designator
+RGB14
+LCSC Part Name
+Yo-WS2812B-3528反贴雾状
+Supplier Part
+C9900003682
+Manufacturer
+
+Manufacturer Part
+Yo-WS2812B-3528反贴雾状
+Supplier Footprint
+LED-SMD_L3.2-W2.8-BR_DY-S35281
+JLCPCB Part Class
+扩展库
+Datasheet
+https://atta.szlcsc.comnull
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Name
+Yo-WS2812B-3528反贴雾状
+Description
+
+Unique ID
+gge17
+Reuse Block
+
+Group ID
+
+Channel ID
+$3e1247
+Device
+Yo-WS2812B-3528反贴雾状
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+RGB15
+FOOTPRINT
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+PARTTYPE
+Yo-WS2812B-3528反贴雾状
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Designator
+RGB15
+LCSC Part Name
+Yo-WS2812B-3528反贴雾状
+Supplier Part
+C9900003682
+Manufacturer
+
+Manufacturer Part
+Yo-WS2812B-3528反贴雾状
+Supplier Footprint
+LED-SMD_L3.2-W2.8-BR_DY-S35281
+JLCPCB Part Class
+扩展库
+Datasheet
+https://atta.szlcsc.comnull
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Name
+Yo-WS2812B-3528反贴雾状
+Description
+
+Unique ID
+gge18
+Reuse Block
+
+Group ID
+
+Channel ID
+$3e1283
+Device
+Yo-WS2812B-3528反贴雾状
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+USB1
+FOOTPRINT
+USB-C-SMD_TYPE-C-6PIN-2MD-073
+PARTTYPE
+TYPE-C 16PIN 2MD(073)
+DESCRIPTION
+连接器类型:Type-C;标准:-;公母:母;端口数量:1;触点数量:16P;安装方式:卧贴;额定电流 - 电源:5A;工作温度范围:-25℃~+85℃;
+Component Kind
+Standard
+Footprint
+USB-C-SMD_TYPE-C-6PIN-2MD-073
+Designator
+USB1
+LCSC Part Name
+Type-C 母 卧贴
+Supplier Part
+C2765186
+Manufacturer
+SHOU HAN(首韩)
+Manufacturer Part
+TYPE-C 16PIN 2MD(073)
+Supplier Footprint
+SMD
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20211123/39B17C16241EAC15C5E277BDA434118E.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+USB-C-SMD_TYPE-C-6PIN-2MD-073
+Connector Type
+Type-C
+Standard
+-
+Gender
+母
+Number of Ports
+1
+Number of Contacts
+16P
+Mounting Style
+卧贴
+Current Rating - Power (Max)
+5A
+Operating Temperature Range
+-25℃~+85℃
+Name
+TYPE-C 16PIN 2MD(073)
+Description
+连接器类型:Type-C;标准:-;公母:母;端口数量:1;触点数量:16P;安装方式:卧贴;额定电流 - 电源:5A;工作温度范围:-25℃~+85℃;
+Unique ID
+gge91
+Reuse Block
+
+Group ID
+
+Channel ID
+$6I17
+Origin Footprint
+USB-C-SMD_TYPE-C-6PIN-2MD-073
+Device
+TYPE-C 16PIN 2MD(073)
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+RGB16
+FOOTPRINT
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+PARTTYPE
+Yo-WS2812B-3528反贴雾状
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Designator
+RGB16
+LCSC Part Name
+Yo-WS2812B-3528反贴雾状
+Supplier Part
+C9900003682
+Manufacturer
+
+Manufacturer Part
+Yo-WS2812B-3528反贴雾状
+Supplier Footprint
+LED-SMD_L3.2-W2.8-BR_DY-S35281
+JLCPCB Part Class
+扩展库
+Datasheet
+https://atta.szlcsc.comnull
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Name
+Yo-WS2812B-3528反贴雾状
+Description
+
+Unique ID
+gge19
+Reuse Block
+
+Group ID
+
+Channel ID
+$3e1319
+Device
+Yo-WS2812B-3528反贴雾状
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+RGB17
+FOOTPRINT
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+PARTTYPE
+Yo-WS2812B-3528反贴雾状
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Designator
+RGB17
+LCSC Part Name
+Yo-WS2812B-3528反贴雾状
+Supplier Part
+C9900003682
+Manufacturer
+
+Manufacturer Part
+Yo-WS2812B-3528反贴雾状
+Supplier Footprint
+LED-SMD_L3.2-W2.8-BR_DY-S35281
+JLCPCB Part Class
+扩展库
+Datasheet
+https://atta.szlcsc.comnull
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Name
+Yo-WS2812B-3528反贴雾状
+Description
+
+Unique ID
+gge20
+Reuse Block
+
+Group ID
+
+Channel ID
+$3e1355
+Device
+Yo-WS2812B-3528反贴雾状
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+RGB18
+FOOTPRINT
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+PARTTYPE
+Yo-WS2812B-3528反贴雾状
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Designator
+RGB18
+LCSC Part Name
+Yo-WS2812B-3528反贴雾状
+Supplier Part
+C9900003682
+Manufacturer
+
+Manufacturer Part
+Yo-WS2812B-3528反贴雾状
+Supplier Footprint
+LED-SMD_L3.2-W2.8-BR_DY-S35281
+JLCPCB Part Class
+扩展库
+Datasheet
+https://atta.szlcsc.comnull
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Name
+Yo-WS2812B-3528反贴雾状
+Description
+
+Unique ID
+gge21
+Reuse Block
+
+Group ID
+
+Channel ID
+$3e1391
+Device
+Yo-WS2812B-3528反贴雾状
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+RGB19
+FOOTPRINT
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+PARTTYPE
+Yo-WS2812B-3528反贴雾状
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Designator
+RGB19
+LCSC Part Name
+Yo-WS2812B-3528反贴雾状
+Supplier Part
+C9900003682
+Manufacturer
+
+Manufacturer Part
+Yo-WS2812B-3528反贴雾状
+Supplier Footprint
+LED-SMD_L3.2-W2.8-BR_DY-S35281
+JLCPCB Part Class
+扩展库
+Datasheet
+https://atta.szlcsc.comnull
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Name
+Yo-WS2812B-3528反贴雾状
+Description
+
+Unique ID
+gge22
+Reuse Block
+
+Group ID
+
+Channel ID
+$3e1427
+Device
+Yo-WS2812B-3528反贴雾状
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+RGB20
+FOOTPRINT
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+PARTTYPE
+Yo-WS2812B-3528反贴雾状
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Designator
+RGB20
+LCSC Part Name
+Yo-WS2812B-3528反贴雾状
+Supplier Part
+C9900003682
+Manufacturer
+
+Manufacturer Part
+Yo-WS2812B-3528反贴雾状
+Supplier Footprint
+LED-SMD_L3.2-W2.8-BR_DY-S35281
+JLCPCB Part Class
+扩展库
+Datasheet
+https://atta.szlcsc.comnull
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Name
+Yo-WS2812B-3528反贴雾状
+Description
+
+Unique ID
+gge23
+Reuse Block
+
+Group ID
+
+Channel ID
+$3e1463
+Device
+Yo-WS2812B-3528反贴雾状
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+RGB21
+FOOTPRINT
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+PARTTYPE
+Yo-WS2812B-3528反贴雾状
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Designator
+RGB21
+LCSC Part Name
+Yo-WS2812B-3528反贴雾状
+Supplier Part
+C9900003682
+Manufacturer
+
+Manufacturer Part
+Yo-WS2812B-3528反贴雾状
+Supplier Footprint
+LED-SMD_L3.2-W2.8-BR_DY-S35281
+JLCPCB Part Class
+扩展库
+Datasheet
+https://atta.szlcsc.comnull
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Name
+Yo-WS2812B-3528反贴雾状
+Description
+
+Unique ID
+gge24
+Reuse Block
+
+Group ID
+
+Channel ID
+$3e1575
+Device
+Yo-WS2812B-3528反贴雾状
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+RGB22
+FOOTPRINT
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+PARTTYPE
+Yo-WS2812B-3528反贴雾状
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Designator
+RGB22
+LCSC Part Name
+Yo-WS2812B-3528反贴雾状
+Supplier Part
+C9900003682
+Manufacturer
+
+Manufacturer Part
+Yo-WS2812B-3528反贴雾状
+Supplier Footprint
+LED-SMD_L3.2-W2.8-BR_DY-S35281
+JLCPCB Part Class
+扩展库
+Datasheet
+https://atta.szlcsc.comnull
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Name
+Yo-WS2812B-3528反贴雾状
+Description
+
+Unique ID
+gge27
+Reuse Block
+
+Group ID
+
+Channel ID
+$3e1611
+Device
+Yo-WS2812B-3528反贴雾状
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+RGB1
+FOOTPRINT
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+PARTTYPE
+Yo-WS2812B-3528反贴雾状
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Designator
+RGB1
+LCSC Part Name
+Yo-WS2812B-3528反贴雾状
+Supplier Part
+C9900003682
+Manufacturer
+
+Manufacturer Part
+Yo-WS2812B-3528反贴雾状
+Supplier Footprint
+LED-SMD_L3.2-W2.8-BR_DY-S35281
+JLCPCB Part Class
+扩展库
+Datasheet
+https://atta.szlcsc.comnull
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+LED-SMD_L3.2-W2.8_YO-WS2812B-3528
+Name
+Yo-WS2812B-3528反贴雾状
+Description
+
+Unique ID
+gge229
+Reuse Block
+
+Group ID
+
+Channel ID
+$3e35
+Device
+Yo-WS2812B-3528反贴雾状
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+HOME
+FOOTPRINT
+kailh 五脚 220906
+PARTTYPE
+kailh 220906
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+kailh 五脚 220906
+Designator
+HOME
+LCSC Part Name
+轻触开关 3.6*6.1*2.5
+Supplier Part
+
+Manufacturer
+
+Manufacturer Part
+
+Supplier Footprint
+SMD
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20210810/381712CEF248770C072B585C3485C888.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+NINE-FOX_CPG151101S11
+Contact Current
+50mA
+Voltage Rating (DC)
+12V
+Insulation Resistance
+100MΩ
+Circuit
+单刀单掷
+Mounting Style
+立贴
+Actuator Style
+矩形按钮
+With Lamp
+-
+Operating Force
+250gf@±30gf
+Mechanical Life
+100000
+Operating Temperature
+-25~+85
+Switch Length
+6.1mm
+Switch Width
+3.6mm
+Switch Height
+2.5mm
+Description
+
+Name
+
+Unique ID
+gge4
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e63272
+Device
+kailh 220906
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+PGUP
+FOOTPRINT
+kailh 五脚 220906
+PARTTYPE
+kailh 220906
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+kailh 五脚 220906
+Designator
+PGUP
+LCSC Part Name
+轻触开关 3.6*6.1*2.5
+Supplier Part
+
+Manufacturer
+
+Manufacturer Part
+
+Supplier Footprint
+SMD
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20210810/381712CEF248770C072B585C3485C888.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+NINE-FOX_CPG151101S11
+Contact Current
+50mA
+Voltage Rating (DC)
+12V
+Insulation Resistance
+100MΩ
+Circuit
+单刀单掷
+Mounting Style
+立贴
+Actuator Style
+矩形按钮
+With Lamp
+-
+Operating Force
+250gf@±30gf
+Mechanical Life
+100000
+Operating Temperature
+-25~+85
+Switch Length
+6.1mm
+Switch Width
+3.6mm
+Switch Height
+2.5mm
+Description
+
+Name
+
+Unique ID
+gge25
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e63315
+Device
+kailh 220906
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+DEL
+FOOTPRINT
+kailh 五脚 220906
+PARTTYPE
+kailh 220906
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+kailh 五脚 220906
+Designator
+DEL
+LCSC Part Name
+轻触开关 3.6*6.1*2.5
+Supplier Part
+
+Manufacturer
+
+Manufacturer Part
+
+Supplier Footprint
+SMD
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20210810/381712CEF248770C072B585C3485C888.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+NINE-FOX_CPG151101S11
+Contact Current
+50mA
+Voltage Rating (DC)
+12V
+Insulation Resistance
+100MΩ
+Circuit
+单刀单掷
+Mounting Style
+立贴
+Actuator Style
+矩形按钮
+With Lamp
+-
+Operating Force
+250gf@±30gf
+Mechanical Life
+100000
+Operating Temperature
+-25~+85
+Switch Length
+6.1mm
+Switch Width
+3.6mm
+Switch Height
+2.5mm
+Description
+
+Name
+
+Unique ID
+gge28
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e64447
+Device
+kailh 220906
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+PGDN
+FOOTPRINT
+kailh 五脚 220906
+PARTTYPE
+kailh 220906
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+kailh 五脚 220906
+Designator
+PGDN
+LCSC Part Name
+轻触开关 3.6*6.1*2.5
+Supplier Part
+
+Manufacturer
+
+Manufacturer Part
+
+Supplier Footprint
+SMD
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20210810/381712CEF248770C072B585C3485C888.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+NINE-FOX_CPG151101S11
+Contact Current
+50mA
+Voltage Rating (DC)
+12V
+Insulation Resistance
+100MΩ
+Circuit
+单刀单掷
+Mounting Style
+立贴
+Actuator Style
+矩形按钮
+With Lamp
+-
+Operating Force
+250gf@±30gf
+Mechanical Life
+100000
+Operating Temperature
+-25~+85
+Switch Length
+6.1mm
+Switch Width
+3.6mm
+Switch Height
+2.5mm
+Description
+
+Name
+
+Unique ID
+gge31
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e64571
+Device
+kailh 220906
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+NUM
+FOOTPRINT
+kailh 五脚 220906
+PARTTYPE
+kailh 220906
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+kailh 五脚 220906
+Designator
+NUM
+LCSC Part Name
+轻触开关 3.6*6.1*2.5
+Supplier Part
+
+Manufacturer
+
+Manufacturer Part
+
+Supplier Footprint
+SMD
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20210810/381712CEF248770C072B585C3485C888.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+NINE-FOX_CPG151101S11
+Contact Current
+50mA
+Voltage Rating (DC)
+12V
+Insulation Resistance
+100MΩ
+Circuit
+单刀单掷
+Mounting Style
+立贴
+Actuator Style
+矩形按钮
+With Lamp
+-
+Operating Force
+250gf@±30gf
+Mechanical Life
+100000
+Operating Temperature
+-25~+85
+Switch Length
+6.1mm
+Switch Width
+3.6mm
+Switch Height
+2.5mm
+Description
+
+Name
+
+Unique ID
+gge33
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e67047
+Device
+kailh 220906
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+P/
+FOOTPRINT
+kailh 五脚 220906
+PARTTYPE
+kailh 220906
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+kailh 五脚 220906
+Designator
+P/
+LCSC Part Name
+轻触开关 3.6*6.1*2.5
+Supplier Part
+
+Manufacturer
+
+Manufacturer Part
+
+Supplier Footprint
+SMD
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20210810/381712CEF248770C072B585C3485C888.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+NINE-FOX_CPG151101S11
+Contact Current
+50mA
+Voltage Rating (DC)
+12V
+Insulation Resistance
+100MΩ
+Circuit
+单刀单掷
+Mounting Style
+立贴
+Actuator Style
+矩形按钮
+With Lamp
+-
+Operating Force
+250gf@±30gf
+Mechanical Life
+100000
+Operating Temperature
+-25~+85
+Switch Length
+6.1mm
+Switch Width
+3.6mm
+Switch Height
+2.5mm
+Description
+
+Name
+
+Unique ID
+gge35
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e67128
+Device
+kailh 220906
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+P*
+FOOTPRINT
+kailh 五脚 220906
+PARTTYPE
+kailh 220906
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+kailh 五脚 220906
+Designator
+P*
+LCSC Part Name
+轻触开关 3.6*6.1*2.5
+Supplier Part
+
+Manufacturer
+
+Manufacturer Part
+
+Supplier Footprint
+SMD
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20210810/381712CEF248770C072B585C3485C888.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+NINE-FOX_CPG151101S11
+Contact Current
+50mA
+Voltage Rating (DC)
+12V
+Insulation Resistance
+100MΩ
+Circuit
+单刀单掷
+Mounting Style
+立贴
+Actuator Style
+矩形按钮
+With Lamp
+-
+Operating Force
+250gf@±30gf
+Mechanical Life
+100000
+Operating Temperature
+-25~+85
+Switch Length
+6.1mm
+Switch Width
+3.6mm
+Switch Height
+2.5mm
+Description
+
+Name
+
+Unique ID
+gge36
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e67171
+Device
+kailh 220906
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+P7
+FOOTPRINT
+kailh 五脚 220906
+PARTTYPE
+kailh 220906
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+kailh 五脚 220906
+Designator
+P7
+LCSC Part Name
+轻触开关 3.6*6.1*2.5
+Supplier Part
+
+Manufacturer
+
+Manufacturer Part
+
+Supplier Footprint
+SMD
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20210810/381712CEF248770C072B585C3485C888.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+NINE-FOX_CPG151101S11
+Contact Current
+50mA
+Voltage Rating (DC)
+12V
+Insulation Resistance
+100MΩ
+Circuit
+单刀单掷
+Mounting Style
+立贴
+Actuator Style
+矩形按钮
+With Lamp
+-
+Operating Force
+250gf@±30gf
+Mechanical Life
+100000
+Operating Temperature
+-25~+85
+Switch Length
+6.1mm
+Switch Width
+3.6mm
+Switch Height
+2.5mm
+Description
+
+Name
+
+Unique ID
+gge39
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e67697
+Device
+kailh 220906
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+P8
+FOOTPRINT
+kailh 五脚 220906
+PARTTYPE
+kailh 220906
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+kailh 五脚 220906
+Designator
+P8
+LCSC Part Name
+轻触开关 3.6*6.1*2.5
+Supplier Part
+
+Manufacturer
+
+Manufacturer Part
+
+Supplier Footprint
+SMD
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20210810/381712CEF248770C072B585C3485C888.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+NINE-FOX_CPG151101S11
+Contact Current
+50mA
+Voltage Rating (DC)
+12V
+Insulation Resistance
+100MΩ
+Circuit
+单刀单掷
+Mounting Style
+立贴
+Actuator Style
+矩形按钮
+With Lamp
+-
+Operating Force
+250gf@±30gf
+Mechanical Life
+100000
+Operating Temperature
+-25~+85
+Switch Length
+6.1mm
+Switch Width
+3.6mm
+Switch Height
+2.5mm
+Description
+
+Name
+
+Unique ID
+gge41
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e67778
+Device
+kailh 220906
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+P9
+FOOTPRINT
+kailh 五脚 220906
+PARTTYPE
+kailh 220906
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+kailh 五脚 220906
+Designator
+P9
+LCSC Part Name
+轻触开关 3.6*6.1*2.5
+Supplier Part
+
+Manufacturer
+
+Manufacturer Part
+
+Supplier Footprint
+SMD
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20210810/381712CEF248770C072B585C3485C888.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+NINE-FOX_CPG151101S11
+Contact Current
+50mA
+Voltage Rating (DC)
+12V
+Insulation Resistance
+100MΩ
+Circuit
+单刀单掷
+Mounting Style
+立贴
+Actuator Style
+矩形按钮
+With Lamp
+-
+Operating Force
+250gf@±30gf
+Mechanical Life
+100000
+Operating Temperature
+-25~+85
+Switch Length
+6.1mm
+Switch Width
+3.6mm
+Switch Height
+2.5mm
+Description
+
+Name
+
+Unique ID
+gge42
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e67821
+Device
+kailh 220906
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+P4
+FOOTPRINT
+kailh 五脚 220906
+PARTTYPE
+kailh 220906
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+kailh 五脚 220906
+Designator
+P4
+LCSC Part Name
+轻触开关 3.6*6.1*2.5
+Supplier Part
+
+Manufacturer
+
+Manufacturer Part
+
+Supplier Footprint
+SMD
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20210810/381712CEF248770C072B585C3485C888.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+NINE-FOX_CPG151101S11
+Contact Current
+50mA
+Voltage Rating (DC)
+12V
+Insulation Resistance
+100MΩ
+Circuit
+单刀单掷
+Mounting Style
+立贴
+Actuator Style
+矩形按钮
+With Lamp
+-
+Operating Force
+250gf@±30gf
+Mechanical Life
+100000
+Operating Temperature
+-25~+85
+Switch Length
+6.1mm
+Switch Width
+3.6mm
+Switch Height
+2.5mm
+Description
+
+Name
+
+Unique ID
+gge44
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e68358
+Device
+kailh 220906
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+P5
+FOOTPRINT
+kailh 五脚 220906
+PARTTYPE
+kailh 220906
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+kailh 五脚 220906
+Designator
+P5
+LCSC Part Name
+轻触开关 3.6*6.1*2.5
+Supplier Part
+
+Manufacturer
+
+Manufacturer Part
+
+Supplier Footprint
+SMD
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20210810/381712CEF248770C072B585C3485C888.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+NINE-FOX_CPG151101S11
+Contact Current
+50mA
+Voltage Rating (DC)
+12V
+Insulation Resistance
+100MΩ
+Circuit
+单刀单掷
+Mounting Style
+立贴
+Actuator Style
+矩形按钮
+With Lamp
+-
+Operating Force
+250gf@±30gf
+Mechanical Life
+100000
+Operating Temperature
+-25~+85
+Switch Length
+6.1mm
+Switch Width
+3.6mm
+Switch Height
+2.5mm
+Description
+
+Name
+
+Unique ID
+gge46
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e68439
+Device
+kailh 220906
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+P6
+FOOTPRINT
+kailh 五脚 220906
+PARTTYPE
+kailh 220906
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+kailh 五脚 220906
+Designator
+P6
+LCSC Part Name
+轻触开关 3.6*6.1*2.5
+Supplier Part
+
+Manufacturer
+
+Manufacturer Part
+
+Supplier Footprint
+SMD
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20210810/381712CEF248770C072B585C3485C888.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+NINE-FOX_CPG151101S11
+Contact Current
+50mA
+Voltage Rating (DC)
+12V
+Insulation Resistance
+100MΩ
+Circuit
+单刀单掷
+Mounting Style
+立贴
+Actuator Style
+矩形按钮
+With Lamp
+-
+Operating Force
+250gf@±30gf
+Mechanical Life
+100000
+Operating Temperature
+-25~+85
+Switch Length
+6.1mm
+Switch Width
+3.6mm
+Switch Height
+2.5mm
+Description
+
+Name
+
+Unique ID
+gge47
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e68482
+Device
+kailh 220906
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+P1
+FOOTPRINT
+kailh 五脚 220906
+PARTTYPE
+kailh 220906
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+kailh 五脚 220906
+Designator
+P1
+LCSC Part Name
+轻触开关 3.6*6.1*2.5
+Supplier Part
+
+Manufacturer
+
+Manufacturer Part
+
+Supplier Footprint
+SMD
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20210810/381712CEF248770C072B585C3485C888.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+NINE-FOX_CPG151101S11
+Contact Current
+50mA
+Voltage Rating (DC)
+12V
+Insulation Resistance
+100MΩ
+Circuit
+单刀单掷
+Mounting Style
+立贴
+Actuator Style
+矩形按钮
+With Lamp
+-
+Operating Force
+250gf@±30gf
+Mechanical Life
+100000
+Operating Temperature
+-25~+85
+Switch Length
+6.1mm
+Switch Width
+3.6mm
+Switch Height
+2.5mm
+Description
+
+Name
+
+Unique ID
+gge49
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e69008
+Device
+kailh 220906
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+P2
+FOOTPRINT
+kailh 五脚 220906
+PARTTYPE
+kailh 220906
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+kailh 五脚 220906
+Designator
+P2
+LCSC Part Name
+轻触开关 3.6*6.1*2.5
+Supplier Part
+
+Manufacturer
+
+Manufacturer Part
+
+Supplier Footprint
+SMD
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20210810/381712CEF248770C072B585C3485C888.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+NINE-FOX_CPG151101S11
+Contact Current
+50mA
+Voltage Rating (DC)
+12V
+Insulation Resistance
+100MΩ
+Circuit
+单刀单掷
+Mounting Style
+立贴
+Actuator Style
+矩形按钮
+With Lamp
+-
+Operating Force
+250gf@±30gf
+Mechanical Life
+100000
+Operating Temperature
+-25~+85
+Switch Length
+6.1mm
+Switch Width
+3.6mm
+Switch Height
+2.5mm
+Description
+
+Name
+
+Unique ID
+gge51
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e69089
+Device
+kailh 220906
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+P3
+FOOTPRINT
+kailh 五脚 220906
+PARTTYPE
+kailh 220906
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+kailh 五脚 220906
+Designator
+P3
+LCSC Part Name
+轻触开关 3.6*6.1*2.5
+Supplier Part
+
+Manufacturer
+
+Manufacturer Part
+
+Supplier Footprint
+SMD
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20210810/381712CEF248770C072B585C3485C888.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+NINE-FOX_CPG151101S11
+Contact Current
+50mA
+Voltage Rating (DC)
+12V
+Insulation Resistance
+100MΩ
+Circuit
+单刀单掷
+Mounting Style
+立贴
+Actuator Style
+矩形按钮
+With Lamp
+-
+Operating Force
+250gf@±30gf
+Mechanical Life
+100000
+Operating Temperature
+-25~+85
+Switch Length
+6.1mm
+Switch Width
+3.6mm
+Switch Height
+2.5mm
+Description
+
+Name
+
+Unique ID
+gge52
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e69132
+Device
+kailh 220906
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+P0
+FOOTPRINT
+kailh 五脚 220906
+PARTTYPE
+kailh 220906
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+kailh 五脚 220906
+Designator
+P0
+LCSC Part Name
+轻触开关 3.6*6.1*2.5
+Supplier Part
+
+Manufacturer
+
+Manufacturer Part
+
+Supplier Footprint
+SMD
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20210810/381712CEF248770C072B585C3485C888.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+NINE-FOX_CPG151101S11
+Contact Current
+50mA
+Voltage Rating (DC)
+12V
+Insulation Resistance
+100MΩ
+Circuit
+单刀单掷
+Mounting Style
+立贴
+Actuator Style
+矩形按钮
+With Lamp
+-
+Operating Force
+250gf@±30gf
+Mechanical Life
+100000
+Operating Temperature
+-25~+85
+Switch Length
+6.1mm
+Switch Width
+3.6mm
+Switch Height
+2.5mm
+Description
+
+Name
+
+Unique ID
+gge54
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e69658
+Device
+kailh 220906
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+PDOT
+FOOTPRINT
+kailh 五脚 220906
+PARTTYPE
+kailh 220906
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+kailh 五脚 220906
+Designator
+PDOT
+LCSC Part Name
+轻触开关 3.6*6.1*2.5
+Supplier Part
+
+Manufacturer
+
+Manufacturer Part
+
+Supplier Footprint
+SMD
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20210810/381712CEF248770C072B585C3485C888.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+NINE-FOX_CPG151101S11
+Contact Current
+50mA
+Voltage Rating (DC)
+12V
+Insulation Resistance
+100MΩ
+Circuit
+单刀单掷
+Mounting Style
+立贴
+Actuator Style
+矩形按钮
+With Lamp
+-
+Operating Force
+250gf@±30gf
+Mechanical Life
+100000
+Operating Temperature
+-25~+85
+Switch Length
+6.1mm
+Switch Width
+3.6mm
+Switch Height
+2.5mm
+Description
+
+Name
+
+Unique ID
+gge56
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e69782
+Device
+kailh 220906
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+FN
+FOOTPRINT
+kailh 五脚 220906
+PARTTYPE
+kailh 220906
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+kailh 五脚 220906
+Designator
+FN
+LCSC Part Name
+轻触开关 3.6*6.1*2.5
+Supplier Part
+
+Manufacturer
+
+Manufacturer Part
+
+Supplier Footprint
+SMD
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20210810/381712CEF248770C072B585C3485C888.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+NINE-FOX_CPG151101S11
+Contact Current
+50mA
+Voltage Rating (DC)
+12V
+Insulation Resistance
+100MΩ
+Circuit
+单刀单掷
+Mounting Style
+立贴
+Actuator Style
+矩形按钮
+With Lamp
+-
+Operating Force
+250gf@±30gf
+Mechanical Life
+100000
+Operating Temperature
+-25~+85
+Switch Length
+6.1mm
+Switch Width
+3.6mm
+Switch Height
+2.5mm
+Description
+
+Name
+
+Unique ID
+gge58
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e70141
+Device
+kailh 220906
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+P-
+FOOTPRINT
+kailh 五脚 220906
+PARTTYPE
+kailh 220906
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+kailh 五脚 220906
+Designator
+P-
+LCSC Part Name
+轻触开关 3.6*6.1*2.5
+Supplier Part
+
+Manufacturer
+
+Manufacturer Part
+
+Supplier Footprint
+SMD
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20210810/381712CEF248770C072B585C3485C888.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+NINE-FOX_CPG151101S11
+Contact Current
+50mA
+Voltage Rating (DC)
+12V
+Insulation Resistance
+100MΩ
+Circuit
+单刀单掷
+Mounting Style
+立贴
+Actuator Style
+矩形按钮
+With Lamp
+-
+Operating Force
+250gf@±30gf
+Mechanical Life
+100000
+Operating Temperature
+-25~+85
+Switch Length
+6.1mm
+Switch Width
+3.6mm
+Switch Height
+2.5mm
+Description
+
+Name
+
+Unique ID
+gge60
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e70308
+Device
+kailh 220906
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+P+
+FOOTPRINT
+kailh 五脚 220906
+PARTTYPE
+kailh 220906
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+kailh 五脚 220906
+Designator
+P+
+LCSC Part Name
+轻触开关 3.6*6.1*2.5
+Supplier Part
+
+Manufacturer
+
+Manufacturer Part
+
+Supplier Footprint
+SMD
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20210810/381712CEF248770C072B585C3485C888.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+NINE-FOX_CPG151101S11
+Contact Current
+50mA
+Voltage Rating (DC)
+12V
+Insulation Resistance
+100MΩ
+Circuit
+单刀单掷
+Mounting Style
+立贴
+Actuator Style
+矩形按钮
+With Lamp
+-
+Operating Force
+250gf@±30gf
+Mechanical Life
+100000
+Operating Temperature
+-25~+85
+Switch Length
+6.1mm
+Switch Width
+3.6mm
+Switch Height
+2.5mm
+Description
+
+Name
+
+Unique ID
+gge62
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e70389
+Device
+kailh 220906
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+PENT
+FOOTPRINT
+kailh 五脚 220906
+PARTTYPE
+kailh 220906
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+kailh 五脚 220906
+Designator
+PENT
+LCSC Part Name
+轻触开关 3.6*6.1*2.5
+Supplier Part
+
+Manufacturer
+
+Manufacturer Part
+
+Supplier Footprint
+SMD
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20210810/381712CEF248770C072B585C3485C888.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+NINE-FOX_CPG151101S11
+Contact Current
+50mA
+Voltage Rating (DC)
+12V
+Insulation Resistance
+100MΩ
+Circuit
+单刀单掷
+Mounting Style
+立贴
+Actuator Style
+矩形按钮
+With Lamp
+-
+Operating Force
+250gf@±30gf
+Mechanical Life
+100000
+Operating Temperature
+-25~+85
+Switch Length
+6.1mm
+Switch Width
+3.6mm
+Switch Height
+2.5mm
+Description
+
+Name
+
+Unique ID
+gge63
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e70432
+Device
+kailh 220906
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+D22
+FOOTPRINT
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR
+PARTTYPE
+BAT54C_C181200
+DESCRIPTION
+正向压降(Vf):800mV@100mA;直流反向耐压(Vr):30V;平均整流电流(Io):200mA;
+Component Kind
+Standard
+Footprint
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR
+Designator
+D22
+LCSC Part Name
+电压:30V 电流:200mA
+Supplier Part
+C181200
+Manufacturer
+Hottech(合科泰)
+Manufacturer Part
+BAT54C
+Supplier Footprint
+SOT-23
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20180131/C181200_15173932410631329328.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+SOT-23-3P_L2.9-W1.3-H1.0-LS2.4-P0.95
+Forward Voltage (Vf@If)
+800mV@100mA
+Reverse Voltage (Vr)
+30V
+Average Rectified Current (Io)
+200mA
+Name
+BAT54C
+Description
+正向压降(Vf):800mV@100mA;直流反向耐压(Vr):30V;平均整流电流(Io):200mA;
+Unique ID
+gge26
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e63358
+Device
+BAT54C_C181200
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+D27
+FOOTPRINT
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR
+PARTTYPE
+BAT54C_C181200
+DESCRIPTION
+正向压降(Vf):800mV@100mA;直流反向耐压(Vr):30V;平均整流电流(Io):200mA;
+Component Kind
+Standard
+Footprint
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR
+Designator
+D27
+LCSC Part Name
+电压:30V 电流:200mA
+Supplier Part
+C181200
+Manufacturer
+Hottech(合科泰)
+Manufacturer Part
+BAT54C
+Supplier Footprint
+SOT-23
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20180131/C181200_15173932410631329328.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+SOT-23-3P_L2.9-W1.3-H1.0-LS2.4-P0.95
+Forward Voltage (Vf@If)
+800mV@100mA
+Reverse Voltage (Vr)
+30V
+Average Rectified Current (Io)
+200mA
+Name
+BAT54C
+Description
+正向压降(Vf):800mV@100mA;直流反向耐压(Vr):30V;平均整流电流(Io):200mA;
+Unique ID
+gge32
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e64614
+Device
+BAT54C_C181200
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+D46
+FOOTPRINT
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR
+PARTTYPE
+BAT54C_C181200
+DESCRIPTION
+正向压降(Vf):800mV@100mA;直流反向耐压(Vr):30V;平均整流电流(Io):200mA;
+Component Kind
+Standard
+Footprint
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR
+Designator
+D46
+LCSC Part Name
+电压:30V 电流:200mA
+Supplier Part
+C181200
+Manufacturer
+Hottech(合科泰)
+Manufacturer Part
+BAT54C
+Supplier Footprint
+SOT-23
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20180131/C181200_15173932410631329328.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+SOT-23-3P_L2.9-W1.3-H1.0-LS2.4-P0.95
+Forward Voltage (Vf@If)
+800mV@100mA
+Reverse Voltage (Vr)
+30V
+Average Rectified Current (Io)
+200mA
+Name
+BAT54C
+Description
+正向压降(Vf):800mV@100mA;直流反向耐压(Vr):30V;平均整流电流(Io):200mA;
+Unique ID
+gge34
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e67090
+Device
+BAT54C_C181200
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+D47
+FOOTPRINT
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR
+PARTTYPE
+BAT54C_C181200
+DESCRIPTION
+正向压降(Vf):800mV@100mA;直流反向耐压(Vr):30V;平均整流电流(Io):200mA;
+Component Kind
+Standard
+Footprint
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR
+Designator
+D47
+LCSC Part Name
+电压:30V 电流:200mA
+Supplier Part
+C181200
+Manufacturer
+Hottech(合科泰)
+Manufacturer Part
+BAT54C
+Supplier Footprint
+SOT-23
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20180131/C181200_15173932410631329328.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+SOT-23-3P_L2.9-W1.3-H1.0-LS2.4-P0.95
+Forward Voltage (Vf@If)
+800mV@100mA
+Reverse Voltage (Vr)
+30V
+Average Rectified Current (Io)
+200mA
+Name
+BAT54C
+Description
+正向压降(Vf):800mV@100mA;直流反向耐压(Vr):30V;平均整流电流(Io):200mA;
+Unique ID
+gge37
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e97266
+Device
+BAT54C_C181200
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+D51
+FOOTPRINT
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR
+PARTTYPE
+BAT54C_C181200
+DESCRIPTION
+正向压降(Vf):800mV@100mA;直流反向耐压(Vr):30V;平均整流电流(Io):200mA;
+Component Kind
+Standard
+Footprint
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR
+Designator
+D51
+LCSC Part Name
+电压:30V 电流:200mA
+Supplier Part
+C181200
+Manufacturer
+Hottech(合科泰)
+Manufacturer Part
+BAT54C
+Supplier Footprint
+SOT-23
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20180131/C181200_15173932410631329328.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+SOT-23-3P_L2.9-W1.3-H1.0-LS2.4-P0.95
+Forward Voltage (Vf@If)
+800mV@100mA
+Reverse Voltage (Vr)
+30V
+Average Rectified Current (Io)
+200mA
+Name
+BAT54C
+Description
+正向压降(Vf):800mV@100mA;直流反向耐压(Vr):30V;平均整流电流(Io):200mA;
+Unique ID
+gge40
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e67740
+Device
+BAT54C_C181200
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+D52
+FOOTPRINT
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR
+PARTTYPE
+BAT54C_C181200
+DESCRIPTION
+正向压降(Vf):800mV@100mA;直流反向耐压(Vr):30V;平均整流电流(Io):200mA;
+Component Kind
+Standard
+Footprint
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR
+Designator
+D52
+LCSC Part Name
+电压:30V 电流:200mA
+Supplier Part
+C181200
+Manufacturer
+Hottech(合科泰)
+Manufacturer Part
+BAT54C
+Supplier Footprint
+SOT-23
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20180131/C181200_15173932410631329328.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+SOT-23-3P_L2.9-W1.3-H1.0-LS2.4-P0.95
+Forward Voltage (Vf@If)
+800mV@100mA
+Reverse Voltage (Vr)
+30V
+Average Rectified Current (Io)
+200mA
+Name
+BAT54C
+Description
+正向压降(Vf):800mV@100mA;直流反向耐压(Vr):30V;平均整流电流(Io):200mA;
+Unique ID
+gge43
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e67864
+Device
+BAT54C_C181200
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+D56
+FOOTPRINT
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR
+PARTTYPE
+BAT54C_C181200
+DESCRIPTION
+正向压降(Vf):800mV@100mA;直流反向耐压(Vr):30V;平均整流电流(Io):200mA;
+Component Kind
+Standard
+Footprint
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR
+Designator
+D56
+LCSC Part Name
+电压:30V 电流:200mA
+Supplier Part
+C181200
+Manufacturer
+Hottech(合科泰)
+Manufacturer Part
+BAT54C
+Supplier Footprint
+SOT-23
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20180131/C181200_15173932410631329328.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+SOT-23-3P_L2.9-W1.3-H1.0-LS2.4-P0.95
+Forward Voltage (Vf@If)
+800mV@100mA
+Reverse Voltage (Vr)
+30V
+Average Rectified Current (Io)
+200mA
+Name
+BAT54C
+Description
+正向压降(Vf):800mV@100mA;直流反向耐压(Vr):30V;平均整流电流(Io):200mA;
+Unique ID
+gge45
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e68401
+Device
+BAT54C_C181200
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+D57
+FOOTPRINT
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR
+PARTTYPE
+BAT54C_C181200
+DESCRIPTION
+正向压降(Vf):800mV@100mA;直流反向耐压(Vr):30V;平均整流电流(Io):200mA;
+Component Kind
+Standard
+Footprint
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR
+Designator
+D57
+LCSC Part Name
+电压:30V 电流:200mA
+Supplier Part
+C181200
+Manufacturer
+Hottech(合科泰)
+Manufacturer Part
+BAT54C
+Supplier Footprint
+SOT-23
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20180131/C181200_15173932410631329328.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+SOT-23-3P_L2.9-W1.3-H1.0-LS2.4-P0.95
+Forward Voltage (Vf@If)
+800mV@100mA
+Reverse Voltage (Vr)
+30V
+Average Rectified Current (Io)
+200mA
+Name
+BAT54C
+Description
+正向压降(Vf):800mV@100mA;直流反向耐压(Vr):30V;平均整流电流(Io):200mA;
+Unique ID
+gge48
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e68525
+Device
+BAT54C_C181200
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+D62
+FOOTPRINT
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR
+PARTTYPE
+BAT54C_C181200
+DESCRIPTION
+正向压降(Vf):800mV@100mA;直流反向耐压(Vr):30V;平均整流电流(Io):200mA;
+Component Kind
+Standard
+Footprint
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR
+Designator
+D62
+LCSC Part Name
+电压:30V 电流:200mA
+Supplier Part
+C181200
+Manufacturer
+Hottech(合科泰)
+Manufacturer Part
+BAT54C
+Supplier Footprint
+SOT-23
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20180131/C181200_15173932410631329328.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+SOT-23-3P_L2.9-W1.3-H1.0-LS2.4-P0.95
+Forward Voltage (Vf@If)
+800mV@100mA
+Reverse Voltage (Vr)
+30V
+Average Rectified Current (Io)
+200mA
+Name
+BAT54C
+Description
+正向压降(Vf):800mV@100mA;直流反向耐压(Vr):30V;平均整流电流(Io):200mA;
+Unique ID
+gge53
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e69175
+Device
+BAT54C_C181200
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+D67
+FOOTPRINT
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR
+PARTTYPE
+BAT54C_C181200
+DESCRIPTION
+正向压降(Vf):800mV@100mA;直流反向耐压(Vr):30V;平均整流电流(Io):200mA;
+Component Kind
+Standard
+Footprint
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR
+Designator
+D67
+LCSC Part Name
+电压:30V 电流:200mA
+Supplier Part
+C181200
+Manufacturer
+Hottech(合科泰)
+Manufacturer Part
+BAT54C
+Supplier Footprint
+SOT-23
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20180131/C181200_15173932410631329328.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+SOT-23-3P_L2.9-W1.3-H1.0-LS2.4-P0.95
+Forward Voltage (Vf@If)
+800mV@100mA
+Reverse Voltage (Vr)
+30V
+Average Rectified Current (Io)
+200mA
+Name
+BAT54C
+Description
+正向压降(Vf):800mV@100mA;直流反向耐压(Vr):30V;平均整流电流(Io):200mA;
+Unique ID
+gge57
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e69825
+Device
+BAT54C_C181200
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+D71
+FOOTPRINT
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR
+PARTTYPE
+BAT54C_C181200
+DESCRIPTION
+正向压降(Vf):800mV@100mA;直流反向耐压(Vr):30V;平均整流电流(Io):200mA;
+Component Kind
+Standard
+Footprint
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR
+Designator
+D71
+LCSC Part Name
+电压:30V 电流:200mA
+Supplier Part
+C181200
+Manufacturer
+Hottech(合科泰)
+Manufacturer Part
+BAT54C
+Supplier Footprint
+SOT-23
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20180131/C181200_15173932410631329328.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+SOT-23-3P_L2.9-W1.3-H1.0-LS2.4-P0.95
+Forward Voltage (Vf@If)
+800mV@100mA
+Reverse Voltage (Vr)
+30V
+Average Rectified Current (Io)
+200mA
+Name
+BAT54C
+Description
+正向压降(Vf):800mV@100mA;直流反向耐压(Vr):30V;平均整流电流(Io):200mA;
+Unique ID
+gge61
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e70351
+Device
+BAT54C_C181200
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+D72
+FOOTPRINT
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR
+PARTTYPE
+BAT54C_C181200
+DESCRIPTION
+正向压降(Vf):800mV@100mA;直流反向耐压(Vr):30V;平均整流电流(Io):200mA;
+Component Kind
+Standard
+Footprint
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR
+Designator
+D72
+LCSC Part Name
+电压:30V 电流:200mA
+Supplier Part
+C181200
+Manufacturer
+Hottech(合科泰)
+Manufacturer Part
+BAT54C
+Supplier Footprint
+SOT-23
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20180131/C181200_15173932410631329328.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+SOT-23-3P_L2.9-W1.3-H1.0-LS2.4-P0.95
+Forward Voltage (Vf@If)
+800mV@100mA
+Reverse Voltage (Vr)
+30V
+Average Rectified Current (Io)
+200mA
+Name
+BAT54C
+Description
+正向压降(Vf):800mV@100mA;直流反向耐压(Vr):30V;平均整流电流(Io):200mA;
+Unique ID
+gge64
+Reuse Block
+
+Group ID
+
+Channel ID
+$4e70475
+Device
+BAT54C_C181200
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+U1
+FOOTPRINT
+TSSOP-20_L6.5-W4.4-P0.65-LS6.4-BL
+PARTTYPE
+CH552T
+DESCRIPTION
+应用功能:USB转SPI；USB转UART;USB协议版本:USB 2.0;数据速率:12Mbps;
+Component Kind
+Standard
+Footprint
+TSSOP-20_L6.5-W4.4-P0.65-LS6.4-BL
+Designator
+U1
+LCSC Part Name
+8位增强型USB单片机
+Supplier Part
+C111367
+Manufacturer
+WCH(南京沁恒)
+Manufacturer Part
+CH552T
+Supplier Footprint
+TSSOP-20
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/CH552T/112593.html
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+TSSOP-20_L6.5-W4.4-H1.0-LS6.4-P0.65
+Applications Function
+USB转SPI；USB转UART
+USB Protocol
+USB 2.0
+Voltage - Supply
+3.3V~5V
+Data Rate
+12Mbps
+Operating Temperature
+-40℃~+85℃
+Features
+FIFO缓冲；可编程波特率；唤醒功能；内置时钟发生器；低功耗模式；上电复位
+Name
+CH552T
+Description
+应用功能:USB转SPI；USB转UART;USB协议版本:USB 2.0;数据速率:12Mbps;
+Unique ID
+gge1
+Reuse Block
+
+Group ID
+
+Channel ID
+$6I2
+Device
+CH552T
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+C1
+FOOTPRINT
+C0603
+PARTTYPE
+CC0603KRX7R9BB104
+DESCRIPTION
+容值:100nF;精度:±10%;额定电压:50V;温度系数:X7R;
+Component Kind
+Standard
+Footprint
+C0603
+Designator
+C1
+LCSC Part Name
+100nF ±10% 50V
+Supplier Part
+C14663
+Manufacturer
+YAGEO(国巨)
+Manufacturer Part
+CC0603KRX7R9BB104
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/CC0603KRX7R9BB104/15331.html
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+C0603_L1.6-W0.8-H0.8
+Value
+100nF
+Tolerance
+±10%
+Voltage Rating
+50V
+Temperature Coefficient
+X7R
+Name
+100nF
+Description
+容值:100nF;精度:±10%;额定电压:50V;温度系数:X7R;
+Unique ID
+gge230
+Reuse Block
+
+Group ID
+
+Channel ID
+$6I20
+Device
+CC0603KRX7R9BB104
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+R1
+FOOTPRINT
+R0603
+PARTTYPE
+0603WAF5101T5E
+DESCRIPTION
+电阻类型:厚膜电阻;阻值:5.1kΩ;精度:±1%;功率:100mW;工作电压:75V;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Footprint
+R0603
+Designator
+R1
+LCSC Part Name
+厚膜电阻 5.1kΩ ±1%
+Supplier Part
+C23186
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0603WAF5101T5E
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/0603WAF5101T5E/23913.html
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+R0603
+Type
+厚膜电阻
+Value
+5.1kΩ
+Tolerance
+±1%
+Power(Watts)
+100mW
+Voltage-Supply(Max)
+75V
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Name
+5.1kΩ
+Description
+电阻类型:厚膜电阻;阻值:5.1kΩ;精度:±1%;功率:100mW;工作电压:75V;温度系数:±100ppm/℃;
+Unique ID
+gge92
+Reuse Block
+
+Group ID
+
+Channel ID
+$6I15
+Device
+0603WAF5101T5E
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+R2
+FOOTPRINT
+R0603
+PARTTYPE
+0603WAF5101T5E
+DESCRIPTION
+电阻类型:厚膜电阻;阻值:5.1kΩ;精度:±1%;功率:100mW;工作电压:75V;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Footprint
+R0603
+Designator
+R2
+LCSC Part Name
+厚膜电阻 5.1kΩ ±1%
+Supplier Part
+C23186
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0603WAF5101T5E
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/0603WAF5101T5E/23913.html
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+R0603
+Type
+厚膜电阻
+Value
+5.1kΩ
+Tolerance
+±1%
+Power(Watts)
+100mW
+Voltage-Supply(Max)
+75V
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Name
+5.1kΩ
+Description
+电阻类型:厚膜电阻;阻值:5.1kΩ;精度:±1%;功率:100mW;工作电压:75V;温度系数:±100ppm/℃;
+Unique ID
+gge2
+Reuse Block
+
+Group ID
+
+Channel ID
+$6I16
+Device
+0603WAF5101T5E
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+ISP
+FOOTPRINT
+HDR-TH_2P-P2.54-V-F
+PARTTYPE
+HDR-F_2.54_1x2P
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+HDR-TH_2P-P2.54-V-F
+Designator
+ISP
+Add into BOM
+yes
+Supplier Part
+C49661
+Supplier Footprint
+插件
+3D Model Title
+HDR-TH_2P-P2.54-F-LI-1X2P
+Description
+
+Name
+
+Unique ID
+gge231
+Reuse Block
+
+Group ID
+
+Channel ID
+$6I115
+Device
+HDR-F_2.54_1x2P
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+R3
+FOOTPRINT
+R0603
+PARTTYPE
+0603WAF5101T5E
+DESCRIPTION
+电阻类型:厚膜电阻;阻值:5.1kΩ;精度:±1%;功率:100mW;工作电压:75V;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Footprint
+R0603
+Designator
+R3
+LCSC Part Name
+厚膜电阻 5.1kΩ ±1%
+Supplier Part
+C23186
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0603WAF5101T5E
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/0603WAF5101T5E/23913.html
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+R0603
+Type
+厚膜电阻
+Tolerance
+±1%
+Power(Watts)
+100mW
+Voltage-Supply(Max)
+75V
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Name
+5.1kΩ
+Description
+电阻类型:厚膜电阻;阻值:5.1kΩ;精度:±1%;功率:100mW;工作电压:75V;温度系数:±100ppm/℃;
+Unique ID
+gge92_1
+Reuse Block
+
+Group ID
+
+Channel ID
+$6I114
+Value
+5.1kΩ
+Device
+0603WAF5101T5E
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+C55
+FOOTPRINT
+C0603
+PARTTYPE
+CL10A106KP8NNNC
+DESCRIPTION
+容值:10uF;精度:±10%;额定电压:10V;温度系数:X5R;
+Component Kind
+Standard
+Footprint
+C0603
+Designator
+C55
+LCSC Part Name
+10uF ±10% 10V
+Supplier Part
+C19702
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL10A106KP8NNNC
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/CL10A106KP8NNNC/20411.html
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+C0603_L1.6-W0.8-H0.8
+Value
+10uF
+Tolerance
+±10%
+Voltage Rating
+10V
+Temperature Coefficient
+X5R
+Name
+10uF
+Description
+容值:10uF;精度:±10%;额定电压:10V;温度系数:X5R;
+Unique ID
+gge70
+Reuse Block
+
+Group ID
+
+Channel ID
+$3e3322
+Device
+CL10A106KP8NNNC
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+C56
+FOOTPRINT
+C0603
+PARTTYPE
+CL10A106KP8NNNC
+DESCRIPTION
+容值:10uF;精度:±10%;额定电压:10V;温度系数:X5R;
+Component Kind
+Standard
+Footprint
+C0603
+Designator
+C56
+LCSC Part Name
+10uF ±10% 10V
+Supplier Part
+C19702
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL10A106KP8NNNC
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/CL10A106KP8NNNC/20411.html
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+C0603_L1.6-W0.8-H0.8
+Value
+10uF
+Tolerance
+±10%
+Voltage Rating
+10V
+Temperature Coefficient
+X5R
+Name
+10uF
+Description
+容值:10uF;精度:±10%;额定电压:10V;温度系数:X5R;
+Unique ID
+gge72
+Reuse Block
+
+Group ID
+
+Channel ID
+$3e3358
+Device
+CL10A106KP8NNNC
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+C57
+FOOTPRINT
+C0603
+PARTTYPE
+CL10A106KP8NNNC
+DESCRIPTION
+容值:10uF;精度:±10%;额定电压:10V;温度系数:X5R;
+Component Kind
+Standard
+Footprint
+C0603
+Designator
+C57
+LCSC Part Name
+10uF ±10% 10V
+Supplier Part
+C19702
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL10A106KP8NNNC
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/CL10A106KP8NNNC/20411.html
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+C0603_L1.6-W0.8-H0.8
+Value
+10uF
+Tolerance
+±10%
+Voltage Rating
+10V
+Temperature Coefficient
+X5R
+Name
+10uF
+Description
+容值:10uF;精度:±10%;额定电压:10V;温度系数:X5R;
+Unique ID
+gge73
+Reuse Block
+
+Group ID
+
+Channel ID
+$3e3392
+Device
+CL10A106KP8NNNC
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+C58
+FOOTPRINT
+C0603
+PARTTYPE
+CL10A106KP8NNNC
+DESCRIPTION
+容值:10uF;精度:±10%;额定电压:10V;温度系数:X5R;
+Component Kind
+Standard
+Footprint
+C0603
+Designator
+C58
+LCSC Part Name
+10uF ±10% 10V
+Supplier Part
+C19702
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL10A106KP8NNNC
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/CL10A106KP8NNNC/20411.html
+Supplier
+LCSC
+Add into BOM
+yes
+3D Model Title
+C0603_L1.6-W0.8-H0.8
+Value
+10uF
+Tolerance
+±10%
+Voltage Rating
+10V
+Temperature Coefficient
+X5R
+Name
+10uF
+Description
+容值:10uF;精度:±10%;额定电压:10V;温度系数:X5R;
+Unique ID
+gge74
+Reuse Block
+
+Group ID
+
+Channel ID
+$3e3428
+Device
+CL10A106KP8NNNC
+PCB Layer
+BottomLayer
+Convert to PCB
+yes
+
+*
+]
+(
+VBUS_5V 
+RGB6-1 Yo-WS2812B-3528反贴雾状-1 Passive 
+RGB2-1 Yo-WS2812B-3528反贴雾状-1 Passive 
+RGB3-1 Yo-WS2812B-3528反贴雾状-1 Passive 
+RGB4-1 Yo-WS2812B-3528反贴雾状-1 Passive 
+RGB5-1 Yo-WS2812B-3528反贴雾状-1 Passive 
+RGB7-1 Yo-WS2812B-3528反贴雾状-1 Passive 
+RGB8-1 Yo-WS2812B-3528反贴雾状-1 Passive 
+RGB9-1 Yo-WS2812B-3528反贴雾状-1 Passive 
+RGB10-1 Yo-WS2812B-3528反贴雾状-1 Passive 
+RGB11-1 Yo-WS2812B-3528反贴雾状-1 Passive 
+RGB12-1 Yo-WS2812B-3528反贴雾状-1 Passive 
+RGB13-1 Yo-WS2812B-3528反贴雾状-1 Passive 
+RGB14-1 Yo-WS2812B-3528反贴雾状-1 Passive 
+RGB15-1 Yo-WS2812B-3528反贴雾状-1 Passive 
+USB1-2 TYPE-C 16PIN 2MD(073)-2 Passive 
+USB1-11 TYPE-C 16PIN 2MD(073)-11 Passive 
+RGB16-1 Yo-WS2812B-3528反贴雾状-1 Passive 
+RGB17-1 Yo-WS2812B-3528反贴雾状-1 Passive 
+RGB18-1 Yo-WS2812B-3528反贴雾状-1 Passive 
+RGB19-1 Yo-WS2812B-3528反贴雾状-1 Passive 
+RGB20-1 Yo-WS2812B-3528反贴雾状-1 Passive 
+RGB21-1 Yo-WS2812B-3528反贴雾状-1 Passive 
+RGB22-1 Yo-WS2812B-3528反贴雾状-1 Passive 
+RGB1-1 Yo-WS2812B-3528反贴雾状-1 Passive 
+U1-19 CH552T-19 Passive 
+C1-1 CC0603KRX7R9BB104-1 Passive 
+C55-1 CL10A106KP8NNNC-1 Passive 
+C56-1 CL10A106KP8NNNC-1 Passive 
+C57-1 CL10A106KP8NNNC-1 Passive 
+C58-1 CL10A106KP8NNNC-1 Passive 
+)
+(
+$3N879 
+RGB6-2 Yo-WS2812B-3528反贴雾状-2 Passive 
+RGB7-4 Yo-WS2812B-3528反贴雾状-4 Passive 
+)
+(
+GND 
+RGB6-3 Yo-WS2812B-3528反贴雾状-3 Passive 
+RGB2-3 Yo-WS2812B-3528反贴雾状-3 Passive 
+RGB3-3 Yo-WS2812B-3528反贴雾状-3 Passive 
+RGB4-3 Yo-WS2812B-3528反贴雾状-3 Passive 
+RGB5-3 Yo-WS2812B-3528反贴雾状-3 Passive 
+RGB7-3 Yo-WS2812B-3528反贴雾状-3 Passive 
+RGB8-3 Yo-WS2812B-3528反贴雾状-3 Passive 
+RGB9-3 Yo-WS2812B-3528反贴雾状-3 Passive 
+RGB10-3 Yo-WS2812B-3528反贴雾状-3 Passive 
+RGB11-3 Yo-WS2812B-3528反贴雾状-3 Passive 
+RGB12-3 Yo-WS2812B-3528反贴雾状-3 Passive 
+RGB13-3 Yo-WS2812B-3528反贴雾状-3 Passive 
+RGB14-3 Yo-WS2812B-3528反贴雾状-3 Passive 
+RGB15-3 Yo-WS2812B-3528反贴雾状-3 Passive 
+USB1-1 TYPE-C 16PIN 2MD(073)-1 Passive 
+USB1-12 TYPE-C 16PIN 2MD(073)-12 Passive 
+USB1-13 TYPE-C 16PIN 2MD(073)-13 Passive 
+USB1-14 TYPE-C 16PIN 2MD(073)-14 Passive 
+RGB16-3 Yo-WS2812B-3528反贴雾状-3 Passive 
+RGB17-3 Yo-WS2812B-3528反贴雾状-3 Passive 
+RGB18-3 Yo-WS2812B-3528反贴雾状-3 Passive 
+RGB19-3 Yo-WS2812B-3528反贴雾状-3 Passive 
+RGB20-3 Yo-WS2812B-3528反贴雾状-3 Passive 
+RGB21-3 Yo-WS2812B-3528反贴雾状-3 Passive 
+RGB22-3 Yo-WS2812B-3528反贴雾状-3 Passive 
+RGB1-3 Yo-WS2812B-3528反贴雾状-3 Passive 
+U1-18 CH552T-18 Passive 
+C1-2 CC0603KRX7R9BB104-2 Passive 
+R1-1 0603WAF5101T5E-1 Passive 
+R2-1 0603WAF5101T5E-1 Passive 
+C55-2 CL10A106KP8NNNC-2 Passive 
+C56-2 CL10A106KP8NNNC-2 Passive 
+C57-2 CL10A106KP8NNNC-2 Passive 
+C58-2 CL10A106KP8NNNC-2 Passive 
+)
+(
+$3N815 
+RGB6-4 Yo-WS2812B-3528反贴雾状-4 Passive 
+RGB5-2 Yo-WS2812B-3528反贴雾状-2 Passive 
+)
+(
+$3N647 
+RGB2-2 Yo-WS2812B-3528反贴雾状-2 Passive 
+RGB3-4 Yo-WS2812B-3528反贴雾状-4 Passive 
+)
+(
+$3N179 
+RGB2-4 Yo-WS2812B-3528反贴雾状-4 Passive 
+RGB1-2 Yo-WS2812B-3528反贴雾状-2 Passive 
+)
+(
+$3N699 
+RGB3-2 Yo-WS2812B-3528反贴雾状-2 Passive 
+RGB4-4 Yo-WS2812B-3528反贴雾状-4 Passive 
+)
+(
+$3N755 
+RGB4-2 Yo-WS2812B-3528反贴雾状-2 Passive 
+RGB5-4 Yo-WS2812B-3528反贴雾状-4 Passive 
+)
+(
+$3N947 
+RGB7-2 Yo-WS2812B-3528反贴雾状-2 Passive 
+RGB8-4 Yo-WS2812B-3528反贴雾状-4 Passive 
+)
+(
+$3N1019 
+RGB8-2 Yo-WS2812B-3528反贴雾状-2 Passive 
+RGB9-4 Yo-WS2812B-3528反贴雾状-4 Passive 
+)
+(
+$3N1095 
+RGB9-2 Yo-WS2812B-3528反贴雾状-2 Passive 
+RGB10-4 Yo-WS2812B-3528反贴雾状-4 Passive 
+)
+(
+$3N2877 
+RGB10-2 Yo-WS2812B-3528反贴雾状-2 Passive 
+RGB11-4 Yo-WS2812B-3528反贴雾状-4 Passive 
+)
+(
+$3N1499 
+RGB11-2 Yo-WS2812B-3528反贴雾状-2 Passive 
+RGB12-4 Yo-WS2812B-3528反贴雾状-4 Passive 
+)
+(
+$3N1503 
+RGB12-2 Yo-WS2812B-3528反贴雾状-2 Passive 
+RGB13-4 Yo-WS2812B-3528反贴雾状-4 Passive 
+)
+(
+$3N1507 
+RGB13-2 Yo-WS2812B-3528反贴雾状-2 Passive 
+RGB14-4 Yo-WS2812B-3528反贴雾状-4 Passive 
+)
+(
+$3N1511 
+RGB14-2 Yo-WS2812B-3528反贴雾状-2 Passive 
+RGB15-4 Yo-WS2812B-3528反贴雾状-4 Passive 
+)
+(
+$3N1515 
+RGB15-2 Yo-WS2812B-3528反贴雾状-2 Passive 
+RGB16-4 Yo-WS2812B-3528反贴雾状-4 Passive 
+)
+(
+$6N12 
+USB1-4 TYPE-C 16PIN 2MD(073)-4 Passive 
+R1-2 0603WAF5101T5E-2 Passive 
+)
+(
+D- 
+USB1-5 TYPE-C 16PIN 2MD(073)-5 Passive 
+USB1-7 TYPE-C 16PIN 2MD(073)-7 Passive 
+U1-15 CH552T-15 Passive 
+)
+(
+D+ 
+USB1-6 TYPE-C 16PIN 2MD(073)-6 Passive 
+USB1-8 TYPE-C 16PIN 2MD(073)-8 Passive 
+U1-14 CH552T-14 Passive 
+ISP-2 HDR-F_2.54_1x2P-2 Passive 
+)
+(
+$6N7 
+USB1-10 TYPE-C 16PIN 2MD(073)-10 Passive 
+R2-2 0603WAF5101T5E-2 Passive 
+)
+(
+$3N1519 
+RGB16-2 Yo-WS2812B-3528反贴雾状-2 Passive 
+RGB17-4 Yo-WS2812B-3528反贴雾状-4 Passive 
+)
+(
+$3N1523 
+RGB17-2 Yo-WS2812B-3528反贴雾状-2 Passive 
+RGB18-4 Yo-WS2812B-3528反贴雾状-4 Passive 
+)
+(
+$3N1527 
+RGB18-2 Yo-WS2812B-3528反贴雾状-2 Passive 
+RGB19-4 Yo-WS2812B-3528反贴雾状-4 Passive 
+)
+(
+$3N1531 
+RGB19-2 Yo-WS2812B-3528反贴雾状-2 Passive 
+RGB20-4 Yo-WS2812B-3528反贴雾状-4 Passive 
+)
+(
+$3N2853 
+RGB20-2 Yo-WS2812B-3528反贴雾状-2 Passive 
+RGB21-4 Yo-WS2812B-3528反贴雾状-4 Passive 
+)
+(
+$3N1935 
+RGB21-2 Yo-WS2812B-3528反贴雾状-2 Passive 
+RGB22-4 Yo-WS2812B-3528反贴雾状-4 Passive 
+)
+(
+2812_PWM 
+RGB1-4 Yo-WS2812B-3528反贴雾状-4 Passive 
+U1-7 CH552T-7 Passive 
+)
+(
+$4N108803 
+HOME-1 kailh 220906-1 Passive 
+D51-1 BAT54C_C181200-1 Passive 
+)
+(
+COL0 
+HOME-2 kailh 220906-2 Passive 
+PGUP-2 kailh 220906-2 Passive 
+DEL-2 kailh 220906-2 Passive 
+PGDN-2 kailh 220906-2 Passive 
+FN-2 kailh 220906-2 Passive 
+U1-1 CH552T-1 Passive 
+)
+(
+$4N108826 
+PGUP-1 kailh 220906-1 Passive 
+D22-1 BAT54C_C181200-1 Passive 
+)
+(
+$4N108789 
+DEL-1 kailh 220906-1 Passive 
+D27-1 BAT54C_C181200-1 Passive 
+)
+(
+$4N108841 
+PGDN-1 kailh 220906-1 Passive 
+D46-1 BAT54C_C181200-1 Passive 
+)
+(
+COL1 
+NUM-1 kailh 220906-1 Passive 
+P7-1 kailh 220906-1 Passive 
+P4-1 kailh 220906-1 Passive 
+P1-1 kailh 220906-1 Passive 
+P0-1 kailh 220906-1 Passive 
+U1-2 CH552T-2 Passive 
+)
+(
+$4N108791 
+NUM-2 kailh 220906-2 Passive 
+D27-2 BAT54C_C181200-2 Passive 
+)
+(
+$4N67275 
+P/-1 kailh 220906-1 Passive 
+D47-1 BAT54C_C181200-1 Passive 
+)
+(
+COL2 
+P/-2 kailh 220906-2 Passive 
+P8-2 kailh 220906-2 Passive 
+P5-2 kailh 220906-2 Passive 
+P2-2 kailh 220906-2 Passive 
+PDOT-2 kailh 220906-2 Passive 
+U1-3 CH552T-3 Passive 
+)
+(
+COL3 
+P*-1 kailh 220906-1 Passive 
+P9-1 kailh 220906-1 Passive 
+P6-1 kailh 220906-1 Passive 
+P3-1 kailh 220906-1 Passive 
+U1-4 CH552T-4 Passive 
+)
+(
+$4N67277 
+P*-2 kailh 220906-2 Passive 
+D47-2 BAT54C_C181200-2 Passive 
+)
+(
+$4N108805 
+P7-2 kailh 220906-2 Passive 
+D51-2 BAT54C_C181200-2 Passive 
+)
+(
+$4N67925 
+P8-1 kailh 220906-1 Passive 
+D52-1 BAT54C_C181200-1 Passive 
+)
+(
+$4N67927 
+P9-2 kailh 220906-2 Passive 
+D52-2 BAT54C_C181200-2 Passive 
+)
+(
+$4N108828 
+P4-2 kailh 220906-2 Passive 
+D22-2 BAT54C_C181200-2 Passive 
+)
+(
+$4N68586 
+P5-1 kailh 220906-1 Passive 
+D57-1 BAT54C_C181200-1 Passive 
+)
+(
+$4N68588 
+P6-2 kailh 220906-2 Passive 
+D57-2 BAT54C_C181200-2 Passive 
+)
+(
+$4N108843 
+P1-2 kailh 220906-2 Passive 
+D46-2 BAT54C_C181200-2 Passive 
+)
+(
+$4N69236 
+P2-1 kailh 220906-1 Passive 
+D62-1 BAT54C_C181200-1 Passive 
+)
+(
+$4N69238 
+P3-2 kailh 220906-2 Passive 
+D62-2 BAT54C_C181200-2 Passive 
+)
+(
+$4N108910 
+P0-2 kailh 220906-2 Passive 
+D67-2 BAT54C_C181200-2 Passive 
+)
+(
+$4N68582 
+PDOT-1 kailh 220906-1 Passive 
+D56-1 BAT54C_C181200-1 Passive 
+)
+(
+$4N108912 
+FN-1 kailh 220906-1 Passive 
+D67-1 BAT54C_C181200-1 Passive 
+)
+(
+$4N108819 
+P--1 kailh 220906-1 Passive 
+D71-1 BAT54C_C181200-1 Passive 
+)
+(
+COL4 
+P--2 kailh 220906-2 Passive 
+P+-2 kailh 220906-2 Passive 
+PENT-2 kailh 220906-2 Passive 
+U1-5 CH552T-5 Passive 
+)
+(
+$4N108918 
+P+-1 kailh 220906-1 Passive 
+D72-1 BAT54C_C181200-1 Passive 
+)
+(
+$4N68584 
+PENT-1 kailh 220906-1 Passive 
+D56-2 BAT54C_C181200-2 Passive 
+)
+(
+P3.5 
+D22-3 BAT54C_C181200-3 Passive 
+D57-3 BAT54C_C181200-3 Passive 
+D72-3 BAT54C_C181200-3 Passive 
+U1-13 CH552T-13 Passive 
+)
+(
+P3.3 
+D27-3 BAT54C_C181200-3 Passive 
+D47-3 BAT54C_C181200-3 Passive 
+D71-3 BAT54C_C181200-3 Passive 
+U1-11 CH552T-11 Passive 
+)
+(
+P1.3 
+D46-3 BAT54C_C181200-3 Passive 
+D62-3 BAT54C_C181200-3 Passive 
+U1-16 CH552T-16 Passive 
+)
+(
+P3.4 
+D51-3 BAT54C_C181200-3 Passive 
+D52-3 BAT54C_C181200-3 Passive 
+U1-12 CH552T-12 Passive 
+)
+(
+P1.2 
+D56-3 BAT54C_C181200-3 Passive 
+D67-3 BAT54C_C181200-3 Passive 
+U1-17 CH552T-17 Passive 
+)
+(
+RST 
+U1-6 CH552T-6 Passive 
+)
+(
+P1.1 
+U1-8 CH552T-8 Passive 
+)
+(
+P3.1 
+U1-9 CH552T-9 Passive 
+)
+(
+P3.0 
+U1-10 CH552T-10 Passive 
+)
+(
+VDD_3.3V 
+U1-20 CH552T-20 Passive 
+R3-2 0603WAF5101T5E-2 Passive 
+)
+(
+$6N106 
+ISP-1 HDR-F_2.54_1x2P-1 Passive 
+R3-1 0603WAF5101T5E-1 Passive 
+)

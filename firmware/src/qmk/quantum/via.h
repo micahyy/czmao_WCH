@@ -1,0 +1,165 @@
+/* Copyright 2019 Jason Williams (Wilba)
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#pragma once
+
+#include "action.h"
+#include "quantum.h"
+
+/* DS22Lite：DataFlash 分区版本标记（每改一次分区就必须 +1）。
+ *   0x5A 上游默认：单层 keymap 50B + tapdance 12B + macro 55B
+ *   0x5B 19:26 双层：config 11B + keymap 100B + macro 17B
+ *   0x5C 19:44 砍宏：删掉 5B macro_loop 区，RGB 配置前移到 addr 1..5，
+ *        config 变 6B + keymap 100B = 106B，macro 归零
+ * via_init() 只在 magic 不匹配时 eeconfig_init_via()。若分区变了却不改
+ * magic，烧过旧固件的板会拿旧数据按新地址读 → 键位/RGB 配置全乱。
+ */
+#define VIA_MAGIC_CODE                      0x5C
+#define VIA_EEPROM_MAGIC_ADDR               0
+
+#define VIA_EEPROM_SAVE_INTERVAL            500
+
+// The end of the EEPROM memory used by VIA
+// By default, dynamic keymaps will start at this if there is no
+// custom config
+#define VIA_EEPROM_CUSTOM_CONFIG_ADDR       (VIA_EEPROM_MAGIC_ADDR + 1)
+
+#define VIA_EEPROM_CUSTOM_MACRO_LOOP_ADDR   VIA_EEPROM_CUSTOM_CONFIG_ADDR
+/* 19:44 砍掉宏：宏循环区不再占 DataFlash，RGB 配置区紧跟 magic。
+ * 开回 DYNAMIC_MACRO_ENABLE 时自动恢复 5B。 */
+#ifdef DYNAMIC_MACRO_ENABLE
+#   define VIA_EEPROM_CUSTOM_MACRO_LOOP_SIZE   5
+#else
+#   define VIA_EEPROM_CUSTOM_MACRO_LOOP_SIZE   0
+#endif
+
+#ifdef RGB_MATRIX_ENABLE
+#define VIA_EEPROM_CUSTOM_RGB_MATRIX_ADDR   (VIA_EEPROM_CUSTOM_MACRO_LOOP_ADDR + VIA_EEPROM_CUSTOM_MACRO_LOOP_SIZE)
+# ifdef RGB_EFFECTS_PLUS
+# define VIA_EEPROM_CUSTOM_RGB_MATRIX_SIZE   5
+# else  
+# define VIA_EEPROM_CUSTOM_RGB_MATRIX_SIZE   4
+# endif // RGB_EFFECTS_PLUS
+#define VIA_EEPROM_CUSTOM_CONFIG_SIZE       VIA_EEPROM_CUSTOM_MACRO_LOOP_SIZE + VIA_EEPROM_CUSTOM_RGB_MATRIX_SIZE
+#else
+#define VIA_EEPROM_CUSTOM_CONFIG_SIZE       VIA_EEPROM_CUSTOM_MACRO_LOOP_SIZE
+#endif // RGB_MATRIX_ENABLE
+
+#define VIA_EEPROM_CONFIG_END               (VIA_EEPROM_CUSTOM_CONFIG_ADDR + VIA_EEPROM_CUSTOM_CONFIG_SIZE)
+
+// This is changed only when the command IDs change,
+// so VIA Configurator can detect compatible firmware.
+#define VIA_PROTOCOL_VERSION                0x000C
+
+enum via_command_id {
+    id_get_protocol_version                 = 0x01, // always 0x01
+    id_get_keyboard_value                   = 0x02,
+    id_set_keyboard_value                   = 0x03,
+    id_dynamic_keymap_get_keycode           = 0x04,
+    id_dynamic_keymap_set_keycode           = 0x05,
+    id_dynamic_keymap_reset                 = 0x06,
+    id_custom_set_value                     = 0x07,
+    id_custom_get_value                     = 0x08,
+    id_custom_save                          = 0x09,
+    id_eeprom_reset                         = 0x0A,
+    id_bootloader_jump                      = 0x0B,
+    id_dynamic_keymap_macro_get_count       = 0x0C,
+    id_dynamic_keymap_macro_get_buffer_size = 0x0D,
+    id_dynamic_keymap_macro_get_buffer      = 0x0E,
+    id_dynamic_keymap_macro_set_buffer      = 0x0F,
+    id_dynamic_keymap_macro_reset           = 0x10,
+    id_dynamic_keymap_get_layer_count       = 0x11,
+    id_dynamic_keymap_get_buffer            = 0x12,
+    id_dynamic_keymap_set_buffer            = 0x13,
+    id_dynamic_keymap_get_encoder           = 0x14,
+    id_dynamic_keymap_set_encoder           = 0x15,
+    id_unhandled                            = 0xFF,
+
+    id_signalrgb_stream_leds                = 0x24,
+    id_signalrgb_effect_enable              = 0x25,
+    id_signalrgb_effect_disable             = 0x26,
+};
+
+enum signalrgb_responses {
+    DEVICE_ERROR_LEDS = 254,
+};
+
+enum via_keyboard_value_id {
+    id_uptime              = 0x01,
+    id_layout_options      = 0x02,
+    id_switch_matrix_state = 0x03,
+    id_firmware_version    = 0x04,
+    id_device_indication   = 0x05,
+};
+
+enum via_channel_id {
+    id_custom_channel         = 0,
+    id_qmk_backlight_channel  = 1,
+    id_qmk_rgblight_channel   = 2,
+    id_qmk_rgb_matrix_channel = 3,
+    id_qmk_audio_channel      = 4,
+
+    id_qmk_macro_loop_channel = 5,
+    id_qmk_macro_system       = 6,
+
+    id_qmk_tap_dance_channel  = 7,
+};
+
+enum via_qmk_rgb_matrix_value {
+    id_qmk_rgb_matrix_brightness   = 1,
+    id_qmk_rgb_matrix_effect       = 2,
+    id_qmk_rgb_matrix_effect_speed = 3,
+    id_qmk_rgb_matrix_color        = 4,
+
+    id_qmk_rgb_matrix_color_red    = 5,
+    id_qmk_rgb_matrix_color_green  = 6,
+    id_qmk_rgb_matrix_color_blue   = 7,
+};
+
+enum via_qmk_macro_loop_value {
+    id_qmk_macro_loop_m0    = 1,
+    id_qmk_macro_loop_m1    = 2,
+    id_qmk_macro_loop_m2    = 3,
+    id_qmk_macro_loop_m3    = 4,
+    id_qmk_macro_loop_m4    = 5,
+};
+
+enum id_qmk_macro_system_value {
+    id_system_eeprom_reset    = 1,
+    id_system_bootloader_jump = 2,
+};
+
+enum id_qmk_tap_dance_value {
+    id_qmk_tap_dance_td0    = 1,
+    id_qmk_tap_dance_td1    = 2,
+    id_qmk_tap_dance_td2    = 3,
+    id_qmk_tap_dance_td3    = 4,
+    id_qmk_tap_dance_td4    = 5,
+};
+
+// Called by QMK core to initialize dynamic keymaps etc.
+void eeconfig_init_via(void);
+void via_init(void);
+
+/* 恢复出厂 / 进 bootloader：raw HID 回调只挂起动作，回包发出后由 via_task()
+ * 执行重建 EEPROM + 软复位（或跳 bootloader），由 ch55xQmkLite_task() 调用。 */
+void via_factory_reset(void);
+void via_bootloader_jump(void);
+void via_task(void);
+void bootloader_jump(void);
+
+// Called by QMK core to process VIA-specific keycodes.
+bool process_record_via(uint16_t keycode, keyrecord_t *record);

@@ -1,0 +1,11 @@
+# Generated build outputs (release hex + mem are intentionally tracked)
+firmware/build/*
+!firmware/build/DS22Lite_CH552T.hex
+!firmware/build/DS22Lite_CH552T.mem
+!firmware/build/patched_core/
+firmware/build/obj/
+# Python / OS
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
