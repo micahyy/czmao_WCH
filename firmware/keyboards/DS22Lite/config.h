@@ -13,21 +13,15 @@
  * ==========================================================================*/
 
 /* ---- USB 身份 ------------------------------------------------------------
- * 原先用 QMK 通用 VID 0xFEED，但 VIA 3.0 (usevia.app) 的 the-via/reader
- * src/transform.ts 第 31 行硬编码拒绝：
- *     if (vendorId.toUpperCase() === '0XFEED')
- *         throw new Error(`'0xFEED' is not a valid vendorId.`);
- * 大小写都拒，报错里那个 0xFEED 是写死的字符串，不是回显文件内容。
- * 现沿用上游框架自带 5 个键盘的 VID 0x5262，PID 0x4443（原按 'DC'
- * 的 ASCII 取；已用 PID：0x5217 / 0x4E45 / 0x4B4B / 0x4E4B / 0x4E52）。
- * 2026-11-12 键盘改名 DS22Lite，VID/PID 故意不动：它只是设备身份，
- * 改名只动 USB 产品串 + VIA name + 插件名，避免又要重导 VIA 定义。
+ * 0xFEED 被 VIA 3.0 (the-via/reader src/transform.ts:31) 硬编码拒收。
+ * 2026-11-12 改用 CZMao 自有 VID 0x4A17 + 新 PID 0x4A50：
+ *   - CH552T 系列起始号，预留 0x4A51..0x4A5F 给后续同系列板；
+ *   - 已全量核对 micahyy.github.io/czm/definitions 下 55 组 VID/PID：
+ *     0x4A5x 零命中，vpid 1243040336 不在 supported_kbs.json / v3 成品里。
  * 三处必须同步：本文件、DS22Lite_via.json、DS22Lite_signalrgb.js，然后重编重烧。
- * 出货前若要换成自己的 VID（USB-IF 付费 / pid.codes 开源免费 PID），
- * 同样三处同步 + `python build.py --clean`。
  */
-#define VENDOR_ID   0x5262
-#define PRODUCT_ID  0x4443
+#define VENDOR_ID   0x4A17
+#define PRODUCT_ID  0x4A50
 #define MANUFACTURER 'M','a','i','k','u'
 #define PRODUCT      'D','S','2','2','L','i','t','e'
 

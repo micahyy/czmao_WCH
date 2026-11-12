@@ -16,8 +16,11 @@ ROOT = Path(__file__).resolve().parent
 KB = ROOT / "keyboards" / "DS22Lite"
 SRC = ROOT / "src" / "qmk" / "quantum"
 NAME = "DS22Lite"
-# VIA 3.0 (the-via/reader src/transform.ts:31) 硬编码拒收 vendorId 0xFEED
-VID, PID = "0x5262", "0x4443"
+# VIA 3.0 (the-via/reader src/transform.ts:31) 硬编码拒收 vendorId 0xFEED。
+# 2026-11-12 改为 CZMao 自有 VID 0x4A17 + 新 PID 0x4A50（CH552T 系列起始号）。
+# 已全量扫过 micahyy.github.io/czm/definitions：0x4A5x 零命中，
+# vpid 1243040336 不在 supported_kbs.json / definitions/v3 成品里。
+VID, PID = "0x4A17", "0x4A50"
 ok = True
 
 
@@ -86,6 +89,12 @@ chk(macro(cfg, "VENDOR_ID") == VID and macro(cfg, "PRODUCT_ID") == PID,
 chk(macro(cfg, "PRODUCT").replace(" ", "") == "'D','S','2','2','L','i','t','e'",
     "USB 产品串 = DS22Lite（不是 DC22）")
 chk(macro(cfg, "VENDOR_ID").upper() != "0XFEED", "VIA 3.0 拒收 0xFEED（已避开）")
+
+print("=== USB ID 分配 ===")
+# VIA 定义库里 VID 0x4A17 下已占用的 PID（2026-11-12 全量扫描结果）
+used_4a17 = {"0X0004", "0X4A18", "0X4A19", "0X4A44", "0X4A60"}
+chk(VID == "0x4A17" and PID.upper() not in used_4a17,
+    "0x4A17/0x4A50 为 CH552T 系列新 ID（0x4A17 下已用 PID 无冲突）")
 
 print("=== 框架：静态层 / 砍宏 ===")
 dk_h = (SRC / "dynamic_keymap.h").read_text(encoding="utf-8")

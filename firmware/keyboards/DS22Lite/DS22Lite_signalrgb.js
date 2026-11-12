@@ -1,7 +1,7 @@
 export function Name() { return "DS22Lite"; }
 export function Version() { return "1.0.0"; }
-export function VendorId() { return 0x5262; }
-export function ProductId() { return 0x4443; }
+export function VendorId() { return 0x4A17; }
+export function ProductId() { return 0x4A50; }
 export function Publisher() { return "Maiku"; }
 export function Documentation(){ return "qmk/srgbmods-qmk-firmware"; }
 export function Size() { return [5, 5]; }
