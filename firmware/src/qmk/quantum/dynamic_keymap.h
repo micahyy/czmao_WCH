@@ -30,7 +30,7 @@
 #define DYNAMIC_KEYMAP_LAYER_COUNT          1
 #endif
 
-/* DS22Lite 19:44：总层数可以大于「动态层数」。
+/* 总层数可以大于「动态层数」。
  * DYNAMIC_KEYMAP_LAYER_COUNT 是 VIA 协议上报的层数，决定 DataFlash 里
  * 存几套键表（每层 5x5x2=50B）。CH552 只有 128B DataFlash，4 层动态
  * 键表要 200B，物理装不下。
@@ -44,7 +44,7 @@
 
 #define TOTAL_EEPROM_BYTE_COUNT             128   /* CH552 物理容量，不是本配置用量 */
 
-/* 19:44 砍宏：DYNAMIC_MACRO_ENABLE 关时宏区归零、VIA 上报 0 个宏。
+/* DYNAMIC_MACRO_ENABLE 未定义时宏区归零、VIA 上报 0 个宏。
  * 本配置实际 DataFlash 只用 6(config) + 100(keymap) = 106B。 */
 #ifdef DYNAMIC_MACRO_ENABLE
 #   define DYNAMIC_KEYMAP_MACRO_COUNT       5
