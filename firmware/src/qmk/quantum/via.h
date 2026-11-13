@@ -21,8 +21,8 @@
 
 /* DS22Lite：DataFlash 分区版本标记（每改一次分区就必须 +1）。
  *   0x5A 上游默认：单层 keymap 50B + tapdance 12B + macro 55B
- *   0x5B 19:26 双层：config 11B + keymap 100B + macro 17B
- *   0x5C 19:44 砍宏：删掉 5B macro_loop 区，RGB 配置前移到 addr 1..5，
+ *   0x5B 早期双层分区：config 11B + keymap 100B + macro 17B
+ *   0x5C 当前分区：宏循环区不占 DataFlash，RGB 配置前移到 addr 1..5，
  *        config 变 6B + keymap 100B = 106B，macro 归零
  * via_init() 只在 magic 不匹配时 eeconfig_init_via()。若分区变了却不改
  * magic，烧过旧固件的板会拿旧数据按新地址读 → 键位/RGB 配置全乱。
@@ -38,8 +38,8 @@
 #define VIA_EEPROM_CUSTOM_CONFIG_ADDR       (VIA_EEPROM_MAGIC_ADDR + 1)
 
 #define VIA_EEPROM_CUSTOM_MACRO_LOOP_ADDR   VIA_EEPROM_CUSTOM_CONFIG_ADDR
-/* 19:44 砍掉宏：宏循环区不再占 DataFlash，RGB 配置区紧跟 magic。
- * 开回 DYNAMIC_MACRO_ENABLE 时自动恢复 5B。 */
+/* 宏循环区不占 DataFlash，RGB 配置区紧跟 magic。
+ * 启用 DYNAMIC_MACRO_ENABLE 时自动恢复 5B。 */
 #ifdef DYNAMIC_MACRO_ENABLE
 #   define VIA_EEPROM_CUSTOM_MACRO_LOOP_SIZE   5
 #else
