@@ -110,7 +110,7 @@ void via_task(void) {
 
 // Called by QMK core to process VIA-specific keycodes.
 bool process_record_via(uint16_t keycode, keyrecord_t *record) {
-    /* 与 EC87 修复同口径：恢复出厂 = QK_CLEAR_EEPROM(EE_CLR)、
+    /* 恢复出厂 = QK_CLEAR_EEPROM(EE_CLR)、
      * 进 bootloader = QK_BOOT，系统键值和 VIA 按钮共用同一条路径。 */
     if (record->event.pressed) {
         switch (keycode) {
@@ -132,7 +132,7 @@ bool process_record_via(uint16_t keycode, keyrecord_t *record) {
     }
 #else
     (void)keycode;
-    (void)record;   /* 砍宏后 process_record_via 恒返回 true */
+    (void)record;   /* 未启用宏时 process_record_via 恒返回 true */
 #endif
 
     return true;
@@ -229,7 +229,7 @@ void via_custom_value_command(__idata uint8_t *data) {
                 break;
         }
 #endif
-        /* 19:44 砍宏：这个 channel 不再读写 EEPROM。否则 addr 1..5 现在是
+        /* 宏功能未启用，这个 channel 不读写 EEPROM。addr 1..5 现在是
          * RGB 配置区，旧版 VIA 若来配宏循环会把 RGB 设置写坏。 */
         return;
     } else if (*channel_id == id_qmk_macro_system) {
@@ -338,7 +338,7 @@ void raw_hid_receive(__idata uint8_t *data, __idata uint8_t length) {
             via_custom_value_command(data);
             break;
         /* VIA Debug 页 / 新版系统菜单发的标准命令 0x0A / 0x0B。
-         * 上游这里是空 break，点了「恢复出厂」完全没反应，与 EC87 同一个坑。 */
+         * 上游此处为空实现，现已接通。 */
         case id_eeprom_reset:
             via_factory_reset();
             break;
