@@ -10,6 +10,21 @@ GitHub Actions in `micahyy.github.io` recursively scans every `.json` under `czm
 `definitions/v3/<vpid>.json` and `dist/definitions/v3/<vpid>.json` from
 `vpid = vendorId * 65536 + productId`; the subdirectory level does not affect the output filename.
 
+## Folder structure / 目录结构
+
+This folder groups **CH552T**-based boards; each board lives in its own subfolder.
+
+本文件夹收纳 **CH552T** 系列板卡，每块板子在独立子目录：
+
+| Board | Folder | VIA definition |
+|---|---|---|
+| DS22Lite | `CH552T/DS22Lite/` | `czm/definitions/czmao/CH552T/DS22Lite/DS22Lite_via.json` |
+
+- `CH552G`-based boards will be a sibling folder `CH552G/` under `czm/definitions/czmao/`.
+- 未来的 `CH552G` 系列将作为同级文件夹 `CH552G/` 放在 `czm/definitions/czmao/` 下。
+- A future `DS17Lite` (also CH552T-based) will be added under `CH552T/DS17Lite/`.
+- 未来的 `DS17Lite`（同为 CH552T）将放进 `CH552T/DS17Lite/`。
+
 ## USB ID 分配 / USB ID allocation
 
 | Board | VID | PID | vpid | Firmware | VIA definition |
