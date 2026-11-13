@@ -70,7 +70,7 @@ enum keycodes_user {
     RGB_SPI_U,
     RGB_SPD_U,
 
-    /* DS22Lite 19:44：静态层入口。⚠ 只能追加在枚举末尾！
+    /* 静态层入口。注意：只能追加在枚举末尾！
      * VIA json 的 customKeycodes 下标 = QK_KB_0 + i，在中间插入会让后面
      * 所有自定义键码错位；新增项必须同步追加到 DS22Lite_via.json 末尾。 */
     KC_TO_2,
