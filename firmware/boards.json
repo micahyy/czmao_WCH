@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "vendorId": "0x4A17",
+  "default": "DS22Lite",
+  "boards": [
+    {
+      "id": "DS22Lite",
+      "name": "DS22Lite",
+      "chip": "CH552T",
+      "define": "BOARD_DS22LITE",
+      "productId": "0x4A50",
+      "vpid": 1243040336,
+      "directory": "DS22Lite",
+      "viaJson": "DS22Lite_via.json",
+      "signalRgb": "DS22Lite_signalrgb.js",
+      "hex": "DS22Lite_CH552T.hex",
+      "viaDefinition": "czm/definitions/czmao/CH552T/DS22Lite/DS22Lite_via.json",
+      "matrix": { "rows": 5, "cols": 5 },
+      "keys": 22,
+      "leds": 22,
+      "emptyPositions": [[1, 4], [3, 4], [4, 3]],
+      "layers": { "dynamic": 2, "total": 4 }
+    }
+  ]
+}
