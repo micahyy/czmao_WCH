@@ -22,7 +22,7 @@
 #include <stdint.h>
 #include <ctype.h>
 
-/* DS22Lite 19:44：维度用 TOTAL_LAYER_COUNT(4)，前 2 层是 VIA 可改的动态层，
+/* 维度用 TOTAL_LAYER_COUNT(4)，前 2 层是 VIA 可改的动态层，
  * 后 2 层是 Flash 常量静态层。见 dynamic_keymap.h 的注释。 */
 const __code uint16_t keymaps[TOTAL_LAYER_COUNT][MATRIX_ROWS][MATRIX_COLS] = KEY_MAPS
 #ifdef ENCODER_ENABLE
