@@ -13,8 +13,8 @@
 
 /* ---- USB 身份 ------------------------------------------------------------
  * VIA 3.0 不接受 vendorId 0xFEED。
- * 修改 VID/PID 时须同步：本文件、DS22Lite_via.json、DS22Lite_signalrgb.js，
- * 然后重新编译烧录。
+ * USB 身份统一登记在 firmware/boards.json。修改 VID/PID / 产品串时须同步
+ * 本文件、DS22Lite_via.json、DS22Lite_signalrgb.js，然后重新编译烧录。
  */
 #define VENDOR_ID   0x4A17
 #define PRODUCT_ID  0x4A50
