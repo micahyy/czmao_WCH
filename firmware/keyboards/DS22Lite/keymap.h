@@ -9,16 +9,14 @@
  *   Layer 2/3 是静态层：键表在 __code Flash，VIA 看不到也改不了，
  *   要改只能改本文件重编；切过去靠 TO(2)/TO(3) / FN(2)/FN(3)。
  *
- * ★ 19:44 砍宏 + 静态 4 层，DataFlash 实算：
- *   config_end = 1(magic) + 5(RGB) = 6（macro_loop 5B 已砍）
- *   keymap 2 x 5x5x2 = 100B -> addr 6..105；macro 0B；合计 106B
+ * ★ DataFlash 分区：
+ *   config_end = 1(magic) + 5(RGB) = 6
+ *   keymap 2 x 5x5x2 = 100B -> addr 6..105；合计 106B
  *   CH552 物理 128B，4 层动态键表要 200B 装不下，故后 2 层放 Flash。
- *   19:26 版（双层 + 17B 宏）是 11 + 100 + 17 = 128B，见 log.md。
- *   分区变了 -> via.h 的 VIA_MAGIC_CODE 已改 0x5C，旧板首次上电自动重建。
+ *   分区变更时须同步递增 via.h 的 VIA_MAGIC_CODE，使 EEPROM 自动重建。
  *
  * ---------------------------------------------------------------------------
- * 电气矩阵（20:07 由 Netlist_DS22Lite_R1.0.0 逐脚反推，已取代 19:08 的
- * board_data.scad 坐标推测）
+ * 电气矩阵（依据 Netlist_DS22Lite_R1.0.0）
  *
  *   ROW 网络（BAT54C 共阴极侧）= {P3.3,P3.4,P3.5,P1.3,P1.2}，下标 row0..4
  *   COL 网络（芯片直连侧）    = {P3.2,P1.4,P1.5,P1.6,P1.7}，下标 col0..4
@@ -57,7 +55,7 @@
    {KC_TO_1,  KC_P0,    KC_PDOT,  KC_NO,    KC_PENT},      \
 }
 
-/* ---- 第二层：19:26 起 TWO_LAYER_ENABLE 已开，参与编译 ----------------- */
+/* ---- 第二层：TWO_LAYER_ENABLE，参与编译 ---------------------------------- */
 /* 导航 / 媒体层，键码跟着物理键迁移到新电气坐标：+ 键→(2,4)、
    Enter→(4,4)、. 键→(4,2)；(0,0)=TO(0) 切回基础层。 */
 #define LAYER_1 {                                            \
@@ -68,8 +66,8 @@
    {KC_SPC,   KC_BSPC,  KC_DEL,   KC_NO,    KC_SPC},       \
 }
 
-/* ---- 静态层：19:44 起参与编译，放 __code Flash，不占 DataFlash -----------
- * 这两层 VIA 改不了，默认内容只是给老板一个能用的起点：
+/* ---- 静态层：编译进 __code Flash，不占 DataFlash --------------------------
+ * 这两层 VIA 改不了，提供一组默认键位：
  *   Layer 2 = F1~F12 + 系统/应用键；Layer 3 = RGB 控制 + 鼠标 + 媒体。
  * 要换成别的键位直接改下面两个宏，再 `python build.py --clean` 重编。
  * 每层的 (4,0) 与 (0,0) 都放了 KC_TO_0，保证切过去出得来。
