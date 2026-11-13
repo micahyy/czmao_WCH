@@ -26,7 +26,7 @@ void layer_switch(uint16_t keycode, keyrecord_t *record) {
             case KC_TO_1: current_layer = 1; break;
             case KC_MO_0: layer_store = current_layer; current_layer = 0; break;
             case KC_MO_1: layer_store = current_layer; current_layer = 1; break;
-            /* DS22Lite 19:44：静态层入口，键表在 Flash（见 dynamic_keymap.c） */
+            /* 静态层入口，键表在 Flash（见 dynamic_keymap.c） */
             case KC_TO_2: current_layer = 2; break;
             case KC_TO_3: current_layer = 3; break;
             case KC_MO_2: layer_store = current_layer; current_layer = 2; break;
@@ -60,7 +60,7 @@ bool process_record_quantum(keyrecord_t *record) {
     uint16_t keycode = keymap_key_to_keycode(record->event.key);
 
 #ifdef TWO_LAYER_ENABLE
-    /* 19:44：TO(2)/TO(3)/MO(2)/MO(3) 追加在枚举末尾，是第二段连续区间，
+    /* TO(2)/TO(3)/MO(2)/MO(3) 追加在枚举末尾，是第二段连续区间，
      * 不能只写一个 <= KC_MO_3 的范围（中间隔着 TD/RGB 键码）。 */
     if ((keycode >= KC_TO_0 && keycode <= KC_MO_1) ||
         (keycode >= KC_TO_2 && keycode <= KC_MO_3)) {
