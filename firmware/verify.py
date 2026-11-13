@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """DS22Lite 配置自检：config.h / keymap.h / VIA json / SignalRGB 与框架枚举的一致性。
 
-19:44 起口径：砍宏 + 静态 4 层（VIA 仍只上报 2 层）。
+当前配置：2 层 VIA 动态键表 + 2 层编译内置键位。
 用法：python verify.py
 """
 from __future__ import annotations
@@ -16,10 +16,7 @@ ROOT = Path(__file__).resolve().parent
 KB = ROOT / "keyboards" / "DS22Lite"
 SRC = ROOT / "src" / "qmk" / "quantum"
 NAME = "DS22Lite"
-# VIA 3.0 (the-via/reader src/transform.ts:31) 硬编码拒收 vendorId 0xFEED。
-# 2026-11-12 改为 CZMao 自有 VID 0x4A17 + 新 PID 0x4A50（CH552T 系列起始号）。
-# 已全量扫过 micahyy.github.io/czm/definitions：0x4A5x 零命中，
-# vpid 1243040336 不在 supported_kbs.json / definitions/v3 成品里。
+# USB 身份：VIA 3.0 不接受 vendorId 0xFEED。
 VID, PID = "0x4A17", "0x4A50"
 ok = True
 
@@ -60,13 +57,13 @@ chk(macro(cfg, "RGB_MATRIX_LED_COUNT") == "22", "22 颗灯")
 
 chk(on("TWO_LAYER_ENABLE"), "TWO_LAYER_ENABLE 开（VIA 上报 2 层）")
 chk(macro(cfg, "TOTAL_LAYER_COUNT") == "4", "TOTAL_LAYER_COUNT = 4（2 动态 + 2 静态）")
-chk(not on("DYNAMIC_MACRO_ENABLE"), "宏已砍（DYNAMIC_MACRO_ENABLE 关）")
-chk(not on("TAP_DANCE_ENABLE"), "TAP_DANCE 已砍（腾 ROM + 12B DataFlash）")
-chk(not on("FCODE_TO_MOUSE_ENABLE"), "FCODE_TO_MOUSE 已砍（宏也没了）")
-chk(on("RGB_KEY_CONTROL") and on("RGB_EFFECTS_PLUS"), "RGB 按键控制与灯效保留")
-chk(on("EXTRAKEY_ENABLE") and on("MOUSE_ENABLE"), "媒体键 / 鼠标键保留")
-chk(not on("ENCODER_ENABLE"), "编码器关闭")
-chk(not on("DIAL_ENABLE"), "DIAL 关闭（省 ROM）")
+chk(not on("DYNAMIC_MACRO_ENABLE"), "动态宏未启用")
+chk(not on("TAP_DANCE_ENABLE"), "Tap Dance 未启用")
+chk(not on("FCODE_TO_MOUSE_ENABLE"), "FCODE_TO_MOUSE 未启用")
+chk(on("RGB_KEY_CONTROL") and on("RGB_EFFECTS_PLUS"), "RGB 按键控制与灯效启用")
+chk(on("EXTRAKEY_ENABLE") and on("MOUSE_ENABLE"), "媒体键 / 鼠标键启用")
+chk(not on("ENCODER_ENABLE"), "编码器未启用")
+chk(not on("DIAL_ENABLE"), "DIAL 未启用")
 
 # DataFlash 128B 分区实算：magic 1 + macro_loop 0 + RGB 5 = 6；动态 2 层 100B；宏 0B
 loop_b = 5 if on("DYNAMIC_MACRO_ENABLE") else 0
@@ -83,20 +80,17 @@ chk(cfg_end == 6 and used_b == 106 and used_b <= 128,
 via_h = (SRC / "via.h").read_text(encoding="utf-8")
 magic = re.search(r"^#define\s+VIA_MAGIC_CODE\s+(0x[0-9A-Fa-f]+)", via_h, re.M)
 chk(magic is not None and magic.group(1).upper() == "0X5C",
-    "VIA_MAGIC_CODE = 0x5C（分区改过，旧板 EEPROM 自动重建）")
+    "VIA_MAGIC_CODE = 0x5C（配置变更时重建 EEPROM）")
 chk(macro(cfg, "VENDOR_ID") == VID and macro(cfg, "PRODUCT_ID") == PID,
     "VID/PID = %s/%s" % (VID, PID))
 chk(macro(cfg, "PRODUCT").replace(" ", "") == "'D','S','2','2','L','i','t','e'",
-    "USB 产品串 = DS22Lite（不是 DC22）")
+    "USB 产品串 = DS22Lite")
 chk(macro(cfg, "VENDOR_ID").upper() != "0XFEED", "VIA 3.0 拒收 0xFEED（已避开）")
 
-print("=== USB ID 分配 ===")
-# VIA 定义库里 VID 0x4A17 下已占用的 PID（2026-11-12 全量扫描结果）
-used_4a17 = {"0X0004", "0X4A18", "0X4A19", "0X4A44", "0X4A60"}
-chk(VID == "0x4A17" and PID.upper() not in used_4a17,
-    "0x4A17/0x4A50 为 CH552T 系列新 ID（0x4A17 下已用 PID 无冲突）")
+print("=== USB ID ===")
+chk(VID == "0x4A17" and PID == "0x4A50", "USB VID/PID = 0x4A17/0x4A50")
 
-print("=== 框架：静态层 / 砍宏 ===")
+print("=== 框架：静态层 / 功能开关 ===")
 dk_h = (SRC / "dynamic_keymap.h").read_text(encoding="utf-8")
 dk_c = (SRC / "dynamic_keymap.c").read_text(encoding="utf-8")
 qh = (SRC / "quantum.h").read_text(encoding="utf-8")
@@ -193,12 +187,12 @@ chk(all("DISABLED" in k["title"] for k in custom if k["name"].startswith("TD("))
     "5 个 TD 占位已标 DISABLED（枚举占位仍不能删）")
 menu_labels = [m.get("label") for m in via.get("menus", [])]
 chk("Tap Dance" not in menu_labels, "VIA 的 Tap Dance 菜单已移除")
-chk("Macro Loop" not in menu_labels, "VIA 的 Macro Loop 菜单已移除（宏已砍）")
+chk("Macro Loop" not in menu_labels, "VIA 的 Macro Loop 菜单未启用")
 chk("Lighting" in menu_labels and "System" in menu_labels, "Lighting / System 菜单保留")
 
-print("=== 恢复出厂设置（EC87 Qoder 修复口径） ===")
+print("=== 恢复出厂设置 ===")
 chk("case id_eeprom_reset:" in via_c and "via_factory_reset();" in via_c,
-    "标准 0x0A EEPROM Reset 已接通（原为空 break）")
+    "标准 0x0A EEPROM Reset 已接通")
 chk("case id_bootloader_jump:" in via_c and "via_bootloader_jump();" in via_c,
     "标准 0x0B Bootloader Jump 已接通")
 chk("case QK_CLEAR_EEPROM:" in via_c and "case QK_BOOTLOADER:" in via_c,
@@ -225,7 +219,7 @@ chk(sorted(jsleds) == list(range(22)), "SignalRGB 22 个 LED 编号 0..21 各一
 chk(len(re.findall(r"\[\s*\d+\s*,\s*\d+\s*\]", jspos)) == 22, "SignalRGB 22 个位置")
 chk('return "%s"' % NAME in js and VID in js and PID in js and "0xFEED" not in js,
     "插件名称与 VID/PID（非 0xFEED）")
-chk(not (ROOT / "keyboards" / "DC22").exists(), "旧 keyboards/DC22 目录已不存在")
+chk(not (ROOT / "keyboards" / "DC22").exists(), "历史 keyboards 目录已清理")
 
 print("=== build/DS22Lite_CH552T.mem ===")
 mem = ROOT / "build" / "DS22Lite_CH552T.mem"
