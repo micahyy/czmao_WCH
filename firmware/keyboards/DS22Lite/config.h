@@ -2,9 +2,8 @@
 /* ============================================================================
  * DS22Lite_R1.0.0 / CH552T (TSSOP20) —— 22 键 numpad 固件配置
  *
- * 框架 : lbtrobit/CH55x_QMK_Lite (main 90cc1ad) + ch55xduino 0.0.18
- * 硬件 : Netlist_DS22Lite_R1.0.0_2026-11-08.net（CH552T 板，67 元件）
- * 档案 : 完整推理/纠错链在 ../../../pcb/ch552g_22key/config_ch552t.h，本文件只留结论
+ * 框架 : lbtrobit/CH55x_QMK_Lite + ch55xduino 0.0.18
+ * 硬件 : Netlist_DS22Lite_R1.0.0_2026-11-08.net（CH552T 板）
  *
  * 编译 : Arduino IDE + ch55xduino 0.0.18
  *          Board = CH552 / Clock = 24MHz internal(5V)
@@ -13,12 +12,9 @@
  * ==========================================================================*/
 
 /* ---- USB 身份 ------------------------------------------------------------
- * 0xFEED 被 VIA 3.0 (the-via/reader src/transform.ts:31) 硬编码拒收。
- * 2026-11-12 改用 CZMao 自有 VID 0x4A17 + 新 PID 0x4A50：
- *   - CH552T 系列起始号，预留 0x4A51..0x4A5F 给后续同系列板；
- *   - 已全量核对 micahyy.github.io/czm/definitions 下 55 组 VID/PID：
- *     0x4A5x 零命中，vpid 1243040336 不在 supported_kbs.json / v3 成品里。
- * 三处必须同步：本文件、DS22Lite_via.json、DS22Lite_signalrgb.js，然后重编重烧。
+ * VIA 3.0 不接受 vendorId 0xFEED。
+ * 修改 VID/PID 时须同步：本文件、DS22Lite_via.json、DS22Lite_signalrgb.js，
+ * 然后重新编译烧录。
  */
 #define VENDOR_ID   0x4A17
 #define PRODUCT_ID  0x4A50
@@ -46,59 +42,39 @@
 #define DIODE_DIRECTION COL2ROW
 
 /* ---- 功能开关：ROM 14336B / DataFlash 128B --------------------------------
- * 【19:44 定案】老板拍板：砍掉宏（17B 本来也干不了啥），层做到 4 套。
+ * CH552T 的 DataFlash 物理只有 128B，而每层 VIA 动态键表需要
+ * 5x5x2 = 50B。因此固件采用「2 层动态 + 2 层静态」的结构：
  *
- * 为什么 VIA 里仍然只显示 2 层：
- *   CH552 的 DataFlash 物理只有 128B（eeprom.c:15 `if (addr>=128) return`，
- *   读也用 uint8 地址），每层动态键表 5x5x2 = 50B，4 层要 200B，
- *   加配置 206B —— 超 78B。砍到全裸、128B 全给键表也只够 2.56 层。
- *   要 VIA 显示 4 层且都能改键，只能换更大 EEPROM 的 MCU / 外挂 EEPROM，
- *   或把键码压成 1 字节（VIA 协议不兼容 = 放弃 VIA 改键）。都不划算。
- *
- * 本配置的做法 = 静态层：
  *   DYNAMIC_KEYMAP_LAYER_COUNT = 2 -> VIA 显示并可改 Layer 0 / Layer 1
  *   TOTAL_LAYER_COUNT          = 4 -> 固件实际有 4 套键位
- *   Layer 2/3 的键表放 __code Flash 常量 keymaps[]，
+ *   Layer 2/3 的键表放在 __code Flash 常量 keymaps[] 中，
  *   dynamic_keymap_get_keycode() 对 layer>=2 直接读常量、set_keycode 忽略。
- *   代价：Layer 2/3 改键要改 keymap.h 重编，VIA 里看不到也不能改。
- *   切过去：VIA 里给 Layer 0/1 任意键绑 TO(2)/TO(3)，或编译期直接放。
+ *   Layer 2/3 需修改 keymap.h 重新编译；VIA 里不可编辑。
+ *   切换到静态层：在 Layer 0/1 上绑定 TO(2)/TO(3) 即可。
  *
- * DataFlash 分区（19:44，按 dynamic_keymap.h + via.h 实算）：
- *   magic 1B -> addr 0
- *   macro_loop 0B -> 已砍（原 5B）
- *   RGB config 5B -> addr 1..5
+ * DataFlash 分区：
+ *   magic 1B            -> addr 0
+ *   RGB config 5B       -> addr 1..5
  *   VIA_EEPROM_CONFIG_END = 6
  *   keymap 2 x 5x5x2 = 100B -> addr 6..105
- *   tapdance 0B / encoder 0B / macro 0B
- *   合计 106B，物理 128B 里空 22B（eeprom 地址上限仍是 128，不动它）。
+ *   tapdance / encoder / macro: 0B
+ *   合计 106B，128B 中余 22B。
  *
- * 砍宏具体做了什么（框架本来没有开关，自己加 DYNAMIC_MACRO_ENABLE）：
- *   via.h   MACRO_LOOP_SIZE 5->0（RGB 配置前移 5B）
- *   dynamic_keymap.h  MACRO_COUNT 5->0 / MACRO_EEPROM_SIZE -> 0
- *   dynamic_macro.c、send_string.c 整包 #ifdef 编出去，空实现兜住调用点
- *   via.c / action.c 调用点同步 #ifdef；VIA json 删 Macro Loop 菜单
- *   VIA 仍上报「0 个宏 / 0 字节缓冲」，网页宏页显示为空而不是报错
- *   开回宏：下面定义 DYNAMIC_MACRO_ENABLE，但 ROM 必须重核 <= 14336
+ * 受片内资源限制，动态宏 / Tap Dance / FCODE_TO_MOUSE / 编码器 / Dial
+ * 未启用。VIA 宏页面为空、相关菜单不出现属于预期行为。
  *
- * ⚠ 分区变了：via.h 的 VIA_MAGIC_CODE 已 0x5B -> 0x5C，烧过旧固件的板
- *   首次上电自动重建 EEPROM。以后再改分区必须同步 +1。
- *
- * ROM 历史实测（诊断时临时放大 --code-size 取真实占用，编完立刻还原）：
- *   A 单层 全功能           14126B / macro 55B
- *   B 双层 全功能           14358B（超 22B，链接失败）
- *   D 双层 -TAP_DANCE       13642B / macro 17B
- *   D+F 双层 -TD -FCODE     13548B / macro 17B（19:26 交付版）
- *   19:44 砍宏 + 静态 4 层 -> 见 build/DS22Lite_CH552T.mem
+ * 修改 DataFlash 分区后须同步递增 via.h 的 VIA_MAGIC_CODE，
+ * 使旧配置在上电时自动重建 EEPROM。
  */
 #define TWO_LAYER_ENABLE
 #define TOTAL_LAYER_COUNT   4   /* 2 层动态(VIA 可改) + 2 层静态(Flash 常量) */
-// #define DYNAMIC_MACRO_ENABLE   /* 砍宏；20:24 实测开回来 = 13812B/14336B，能编过 */
+// #define DYNAMIC_MACRO_ENABLE   /* 未启用 */
 // #define TAP_DANCE_ENABLE
 #define TAP_DANCE_COUNT  2      /* 关 TAP_DANCE_ENABLE 时无效，留着方便开回 */
 #define TAPPING_TERM     200
 #define EXTRAKEY_ENABLE
 #define MOUSE_ENABLE
-// #define FCODE_TO_MOUSE_ENABLE  /* 宏里的 F13~F21→鼠标映射；宏砍了自然无效 */
+// #define FCODE_TO_MOUSE_ENABLE  /* 宏里的 F13~F21→鼠标映射；未启用 */
 // #define DIAL_ENABLE
 
 /* ---- RGB：22 颗 WS2812B，DIN = P1.0 / TSSOP20 pin7 ------------------------
@@ -122,19 +98,18 @@
 // #define ENCODERS_PAD_A  { 12 }
 // #define ENCODERS_PAD_B  { 13 }
 
-/* ---- 层切换键（19:44） ---------------------------------------------------
+/* ---- 层切换键 ------------------------------------------------------------
  * Layer 0 (4,0) FN = KC_TO_1；Layer 1 (0,0) = KC_TO_0；
  * Layer 2/3 的 (4,0)/(0,0) 也放了 KC_TO_0，切过去出得来。
  * VIA 只看到 2 层；TO(2)/TO(3)/FN(2)/FN(3) 在自定义键码里，
  * 绑到 Layer 0/1 任意键即可切到静态层。static 层不能在 VIA 里改键。
  *
- * ⚠ 按住式 MO(n) 的粘层坑（框架缺陷，对所有层都成立）：
- *   process_record_quantum() 每次按键事件都用 current_layer 重新查键表，
- *   不缓存按下时的键码。若只在层 0 放 MO_1，松开时读到层 1 的 (4,0)
- *   （KC_SPC），layer_switch() 释放分支命中不了 → 永久粘层。要用按住式，
- *   相关两层同一位置都得放 MO_n。默认全部用切换式 TO(n)。
+ * 按住式 MO(n) 的注意事项：process_record_quantum() 每次按键事件都用
+ * current_layer 重新查键表，不缓存按下时的键码。若只在层 0 放 MO_1，
+ * 松开时可能读到其它层的键码，导致层切换未释放。要使用按住式切层，
+ * 相关两层同一位置都应放 MO_n。默认键表全部使用切换式 TO(n)。
  *
  * DS22Lite_via.json 里 25 项 customKeycodes 都是 quantum.h 枚举占位，
- * 顺序必须逐项一致，删/插任何一项后面全部错位。末尾 4 项是 19:44
- * 为静态层追加的 TO(2)/TO(3)/FN(2)/FN(3)。
+ * 顺序必须逐项一致，删/插任何一项后面全部错位。末尾 4 项为静态层的
+ * TO(2)/TO(3)/FN(2)/FN(3)。
  */
