@@ -22,7 +22,7 @@
 #include "dynamic_macro.h"
 #include <ctype.h>
 
-/* DS22Lite 19:44：砍掉宏省 ROM。开回宏只需在 config.h 定义
+/* 未启用宏以节省 ROM。启用时只需在 config.h 定义
  * DYNAMIC_MACRO_ENABLE，本文件与 send_string.c 会自动恢复编译。 */
 #ifdef DYNAMIC_MACRO_ENABLE
 
