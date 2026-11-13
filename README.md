@@ -10,9 +10,9 @@ Built on `lbtrobit/CH55x_QMK_Lite` + `ch55xduino 0.0.18` + portable SDCC. Suppor
 
 ## USB identity / USB 身份
 
-> VID/PID `0x4A17 / 0x4A50` are CZMao-owned IDs for the CH552T series (`0x4A51..0x4A5F` reserved). The VIA definition source is published at `micahyy.github.io/czm/definitions/czmao/CH552T系列/DS22Lite_via.json` (vpid `1243040336`).
+> VID/PID `0x4A17 / 0x4A50` are CZMao-owned IDs for the CH552T series (`0x4A51..0x4A5F` reserved). The VIA definition source is published at `micahyy.github.io/czm/definitions/czmao/CH552T/DS22Lite/DS22Lite_via.json` (vpid `1243040336`).
 
-> VID/PID `0x4A17 / 0x4A50` 为 CZMao 自有 ID（CH552T 系列起始号，预留 `0x4A51..0x4A5F`）。VIA 定义源位于 `micahyy.github.io/czm/definitions/czmao/CH552T系列/DS22Lite_via.json`（vpid `1243040336`）。
+> VID/PID `0x4A17 / 0x4A50` 为 CZMao 自有 ID（CH552T 系列起始号，预留 `0x4A51..0x4A5F`）。VIA 定义源位于 `micahyy.github.io/czm/definitions/czmao/CH552T/DS22Lite/DS22Lite_via.json`（vpid `1243040336`）。
 
 ## Features / 功能
 
