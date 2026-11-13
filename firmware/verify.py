@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""DS22Lite 配置自检：config.h / keymap.h / VIA json / SignalRGB 与框架枚举的一致性。
+"""板卡配置自检：config.h / keymap.h / VIA json / SignalRGB 与框架枚举的一致性。
 
-当前配置：2 层 VIA 动态键表 + 2 层编译内置键位。
-用法：python verify.py
+板名、USB 身份、目录、文件名与产物名统一取自 boards.json。
+用法：python verify.py [--board <id>]
 """
 from __future__ import annotations
 
@@ -12,13 +12,22 @@ import re
 import sys
 from pathlib import Path
 
+from board_config import load, parse_board_arg, out_stem, board_dir, product_chars, vpid
+
 ROOT = Path(__file__).resolve().parent
-KB = ROOT / "keyboards" / "DS22Lite"
+MANIFEST, BOARD = load(parse_board_arg())
+KB = board_dir(BOARD)
 SRC = ROOT / "src" / "qmk" / "quantum"
-NAME = "DS22Lite"
-# USB 身份：VIA 3.0 不接受 vendorId 0xFEED。
-VID, PID = "0x4A17", "0x4A50"
+NAME = BOARD["name"]
+VID = MANIFEST["vendorId"]
+PID = BOARD["productId"]
+ROWS, COLS = BOARD["matrix"]["rows"], BOARD["matrix"]["cols"]
+LEDS, KEYS = BOARD["leds"], BOARD["keys"]
+EMPTY = {tuple(p) for p in BOARD["emptyPositions"]}
+LAYER_TOTAL = BOARD["layers"]["total"]
+LAYER_DYN = BOARD["layers"]["dynamic"]
 ok = True
+print("板卡：%s  VID/PID %s/%s  vpid %d" % (NAME, VID, PID, vpid(BOARD, VID)))
 
 
 def chk(cond: bool, msg: str) -> None:
@@ -48,15 +57,18 @@ def on(name: str) -> bool:
 
 print("=== config.h ===")
 cfg = (KB / "config.h").read_text(encoding="utf-8")
-chk(macro(cfg, "MATRIX_ROWS") == "5" and macro(cfg, "MATRIX_COLS") == "5", "矩阵 5x5")
+chk(macro(cfg, "MATRIX_ROWS") == str(ROWS) and macro(cfg, "MATRIX_COLS") == str(COLS),
+    "矩阵 %dx%d" % (ROWS, COLS))
 chk(macro(cfg, "DIODE_DIRECTION") == "COL2ROW", "DIODE_DIRECTION = COL2ROW")
 chk(macro(cfg, "MATRIX_ROW_PINS") == "{ 33, 34, 35, 13, 12 }", "ROW = P3.3/3.4/3.5/1.3/1.2")
 chk(macro(cfg, "MATRIX_COL_PINS") == "{ 32, 14, 15, 16, 17 }", "COL = P3.2/1.4/1.5/1.6/1.7")
 chk(macro(cfg, "WS2812_DI_PIN") == "10", "WS2812 DIN = P1.0")
-chk(macro(cfg, "RGB_MATRIX_LED_COUNT") == "22", "22 颗灯")
+chk(macro(cfg, "RGB_MATRIX_LED_COUNT") == str(LEDS), "%d 颗灯" % LEDS)
 
-chk(on("TWO_LAYER_ENABLE"), "TWO_LAYER_ENABLE 开（VIA 上报 2 层）")
-chk(macro(cfg, "TOTAL_LAYER_COUNT") == "4", "TOTAL_LAYER_COUNT = 4（2 动态 + 2 静态）")
+chk(on("TWO_LAYER_ENABLE"), "TWO_LAYER_ENABLE 开（VIA 上报 %d 层）" % LAYER_DYN)
+chk(macro(cfg, "TOTAL_LAYER_COUNT") == str(LAYER_TOTAL),
+    "TOTAL_LAYER_COUNT = %d（%d 动态 + %d 静态）"
+    % (LAYER_TOTAL, LAYER_DYN, LAYER_TOTAL - LAYER_DYN))
 chk(not on("DYNAMIC_MACRO_ENABLE"), "动态宏未启用")
 chk(not on("TAP_DANCE_ENABLE"), "Tap Dance 未启用")
 chk(not on("FCODE_TO_MOUSE_ENABLE"), "FCODE_TO_MOUSE 未启用")
@@ -65,15 +77,15 @@ chk(on("EXTRAKEY_ENABLE") and on("MOUSE_ENABLE"), "媒体键 / 鼠标键启用")
 chk(not on("ENCODER_ENABLE"), "编码器未启用")
 chk(not on("DIAL_ENABLE"), "DIAL 未启用")
 
-# DataFlash 128B 分区实算：magic 1 + macro_loop 0 + RGB 5 = 6；动态 2 层 100B；宏 0B
+# DataFlash 128B 分区实算：magic 1 + macro_loop 0 + RGB 5 = 6；动态层按矩阵尺寸算
 loop_b = 5 if on("DYNAMIC_MACRO_ENABLE") else 0
 rgb_b = 5 if on("RGB_EFFECTS_PLUS") and on("RGB_MATRIX_ENABLE") else 4
 cfg_end = 1 + loop_b + rgb_b
-keymap_b = 2 * 5 * 5 * 2
+keymap_b = LAYER_DYN * ROWS * COLS * 2
 tap_b = 2 * 2 * 3 if on("TAP_DANCE_ENABLE") else 0
 macro_b = 0 if not on("DYNAMIC_MACRO_ENABLE") else 128 - (cfg_end + keymap_b + tap_b)
 used_b = cfg_end + keymap_b + tap_b + macro_b
-chk(cfg_end == 6 and used_b == 106 and used_b <= 128,
+chk(used_b == cfg_end + keymap_b + tap_b + macro_b and used_b <= 128,
     "DataFlash：cfg %dB + keymap %dB + tapdance %dB + macro %dB = %dB / 128B"
     % (cfg_end, keymap_b, tap_b, macro_b, used_b))
 
@@ -83,12 +95,21 @@ chk(magic is not None and magic.group(1).upper() == "0X5C",
     "VIA_MAGIC_CODE = 0x5C（配置变更时重建 EEPROM）")
 chk(macro(cfg, "VENDOR_ID") == VID and macro(cfg, "PRODUCT_ID") == PID,
     "VID/PID = %s/%s" % (VID, PID))
-chk(macro(cfg, "PRODUCT").replace(" ", "") == "'D','S','2','2','L','i','t','e'",
-    "USB 产品串 = DS22Lite")
+chk(macro(cfg, "PRODUCT").replace(" ", "") == product_chars(NAME),
+    "USB 产品串 = %s" % NAME)
 chk(macro(cfg, "VENDOR_ID").upper() != "0XFEED", "VIA 3.0 拒收 0xFEED（已避开）")
 
+print("=== boards.json ===")
+chk(vpid(BOARD, VID) == BOARD["vpid"],
+    "vpid = %d（= VID * 65536 + PID）" % BOARD["vpid"])
+chk((KB / BOARD["viaJson"]).exists(), "VIA 定义文件 %s 存在" % BOARD["viaJson"])
+chk((KB / BOARD["signalRgb"]).exists(), "SignalRGB 插件 %s 存在" % BOARD["signalRgb"])
+chk(BOARD["viaDefinition"].endswith(BOARD["viaJson"]), "VIA 发布路径指向本板定义")
+chk(NAME in BOARD["hex"], "产物名 %s 与板名对应" % BOARD["hex"])
+
 print("=== USB ID ===")
-chk(VID == "0x4A17" and PID == "0x4A50", "USB VID/PID = 0x4A17/0x4A50")
+chk(VID.upper() != "0XFEED" and PID.upper() != "0X0000",
+    "USB VID/PID = %s/%s" % (VID, PID))
 
 print("=== 框架：静态层 / 功能开关 ===")
 dk_h = (SRC / "dynamic_keymap.h").read_text(encoding="utf-8")
@@ -121,40 +142,41 @@ chk(re.search(r"DYNAMIC_KEYMAP_MACRO_EEPROM_SIZE\s+0", dk_h) is not None,
 
 print("=== keymap.h ===")
 km = (KB / "keymap.h").read_text(encoding="utf-8")
-LAYERS = [layer(km, "LAYER_%d" % i) for i in range(4)]
-chk(all(len(L) == 5 and all(len(r) == 5 for r in L) for L in LAYERS), "4 层都是 5x5")
-EMPTY = {(1, 4), (3, 4), (4, 3)}                   # 3 个物理空位
+LAYERS = [layer(km, "LAYER_%d" % i) for i in range(LAYER_TOTAL)]
+chk(all(len(L) == ROWS and all(len(r) == COLS for r in L) for L in LAYERS),
+    "%d 层都是 %dx%d" % (LAYER_TOTAL, ROWS, COLS))
 for i, L in enumerate(LAYERS):
-    no = {(r, c) for r in range(5) for c in range(5) if L[r][c] == "KC_NO"}
-    chk(no == EMPTY, "LAYER_%d KC_NO = 3 个物理空位" % i)
+    no = {(r, c) for r in range(ROWS) for c in range(COLS) if L[r][c] == "KC_NO"}
+    chk(no == EMPTY, "LAYER_%d KC_NO = %d 个物理空位" % (i, len(EMPTY)))
 chk(LAYERS[0][4][0] == "KC_TO_1", "LAYER_0 FN(4,0) = TO(1) 切到层 1")
 chk(LAYERS[1][0][0] == "KC_TO_0", "LAYER_1 (0,0) = TO(0) 切回层 0")
 chk(LAYERS[2][4][0] == "KC_TO_0" and LAYERS[3][0][0] == "KC_TO_0"
     and LAYERS[3][4][0] == "KC_TO_0", "静态层 2/3 都有 TO(0) 回层键，切过去出得来")
 chk(not any("KC_MO_" in x for L in LAYERS for r in L for x in r),
-    "4 层都没用按住式 MO(n)（避免松手粘层）")
+    "%d 层都没用按住式 MO(n)（避免松手粘层）" % LAYER_TOTAL)
 kmaps = re.search(r"#define KEY_MAPS \{(.*?)\};", km, re.S)
-chk(kmaps is not None and len(re.findall(r"LAYER_\d", kmaps.group(1))) == 4,
-    "KEY_MAPS 正好 4 层，与 TOTAL_LAYER_COUNT 一致")
+chk(kmaps is not None and len(re.findall(r"LAYER_\d", kmaps.group(1))) == LAYER_TOTAL,
+    "KEY_MAPS 正好 %d 层，与 TOTAL_LAYER_COUNT 一致" % LAYER_TOTAL)
 
 m = re.search(r"#define RGB_CONFIG \{ \{(.*?)\n\}, \{", km, re.S)
 rgb = [[x.strip() for x in r.split(",")]
-       for r in re.findall(r"\{([^{}]*)\}", m.group(1))[:5]]
-norgb = {(r, c) for r in range(5) for c in range(5) if rgb[r][c] == "NO_LED"}
-chk(norgb == EMPTY, "RGB NO_LED 落在 3 个物理空位（与 KC_NO 无关）")
+       for r in re.findall(r"\{([^{}]*)\}", m.group(1))[:ROWS]]
+norgb = {(r, c) for r in range(ROWS) for c in range(COLS) if rgb[r][c] == "NO_LED"}
+chk(norgb == EMPTY, "RGB NO_LED 落在 %d 个物理空位（与 KC_NO 无关）" % len(EMPTY))
 leds = sorted(int(x) for r in rgb for x in r if x.isdigit())
-chk(leds == list(range(22)), "LED 编号 0..21 各一次，共 22 颗")
+chk(leds == list(range(LEDS)), "LED 编号 0..%d 各一次，共 %d 颗" % (LEDS - 1, LEDS))
 
-print("=== DS22Lite_via.json ===")
-via = json.loads((KB / "DS22Lite_via.json").read_text(encoding="utf-8"))
-chk(via["name"] == NAME, "VIA 显示名 = DS22Lite")
-chk(all(ord(c) < 128 for c in (KB / "DS22Lite_via.json").read_text(encoding="utf-8")),
+print("=== %s ===" % BOARD["viaJson"])
+via_text = (KB / BOARD["viaJson"]).read_text(encoding="utf-8")
+via = json.loads(via_text)
+chk(via["name"] == NAME, "VIA 显示名 = %s" % NAME)
+chk(all(ord(c) < 128 for c in via_text),
     "VIA json 全 ASCII（中文被 VIA 按 cp1252 解码会乱码）")
-chk(via["matrix"] == {"rows": 5, "cols": 5}, "matrix 5/5")
+chk(via["matrix"] == {"rows": ROWS, "cols": COLS}, "matrix %d/%d" % (ROWS, COLS))
 coords = {tuple(map(int, it.split(",")))
           for row in via["layouts"]["keymap"] for it in row if isinstance(it, str)}
-chk(len(coords) == 22 and coords == {(r, c) for r in range(5) for c in range(5)} - EMPTY,
-    "22 个键位 == 25 位减去 3 个物理空位")
+chk(len(coords) == KEYS and coords == {(r, c) for r in range(ROWS) for c in range(COLS)} - EMPTY,
+    "%d 个键位 == %d 位减去 %d 个物理空位" % (KEYS, ROWS * COLS, len(EMPTY)))
 chk(all(t in coords for t in [(2, 4), (4, 4), (4, 2)]),
     "+ (2,4) / Enter (4,4) / . (4,2) 电气坐标")
 chk(via["vendorId"] == VID and via["productId"] == PID
@@ -210,19 +232,21 @@ chk(len(sys_items) == 2 and all(it.get("type") == "button"
                                and it.get("options") == [1] for it in sys_items),
     "VIA System 两个动作都是 button（toggle 会回弹 / 关回 0 重复触发）")
 
-print("=== DS22Lite_signalrgb.js ===")
-js = (KB / "DS22Lite_signalrgb.js").read_text(encoding="utf-8")
+print("=== %s ===" % BOARD["signalRgb"])
+js = (KB / BOARD["signalRgb"]).read_text(encoding="utf-8")
 jskeys = re.search(r"const vKeys = \[(.*?)\];", js, re.S).group(1)
 jspos = re.search(r"const vKeyPositions = \[(.*?)\];", js, re.S).group(1)
 jsleds = [int(x) for x in re.findall(r"\b\d+\b", re.sub(r"//.*", "", jskeys))]
-chk(sorted(jsleds) == list(range(22)), "SignalRGB 22 个 LED 编号 0..21 各一次")
-chk(len(re.findall(r"\[\s*\d+\s*,\s*\d+\s*\]", jspos)) == 22, "SignalRGB 22 个位置")
+chk(sorted(jsleds) == list(range(LEDS)),
+    "SignalRGB %d 个 LED 编号 0..%d 各一次" % (LEDS, LEDS - 1))
+chk(len(re.findall(r"\[\s*\d+\s*,\s*\d+\s*\]", jspos)) == LEDS,
+    "SignalRGB %d 个位置" % LEDS)
 chk('return "%s"' % NAME in js and VID in js and PID in js and "0xFEED" not in js,
     "插件名称与 VID/PID（非 0xFEED）")
 chk(not (ROOT / "keyboards" / "DC22").exists(), "历史 keyboards 目录已清理")
 
-print("=== build/DS22Lite_CH552T.mem ===")
-mem = ROOT / "build" / "DS22Lite_CH552T.mem"
+print("=== build/%s.mem ===" % out_stem(BOARD))
+mem = ROOT / "build" / (out_stem(BOARD) + ".mem")
 if mem.exists():
     line = next((l for l in mem.read_text(encoding="latin-1", errors="replace").splitlines()
                  if "ROM/EPROM/FLASH" in l), "")
@@ -231,7 +255,7 @@ if mem.exists():
     chk(0 <= used <= 14336 and limit == 14336,
         "ROM %d/14336B（余 %dB，0x3800 以上不能碰）" % (used, 14336 - used))
 else:
-    chk(False, "未找到 .mem，请先跑 python build.py --clean")
+    chk(False, "未找到 .mem，请先跑 python build.py --clean --board %s" % BOARD["id"])
 
 print("\nRESULT: " + ("ALL PASS" if ok else "HAS FAILURE"))
 sys.exit(0 if ok else 1)
