@@ -6,6 +6,4 @@
 - **QMK / VIA** portions: GPL-2.0-or-later, retained from upstream headers.
 - **SignalRGB** plugin `DS22Lite_signalrgb.js`: part of the DS22Lite project.
 
-CZMao-specific changes (DS22Lite config, 4-layer keymap, 22-LED mapping, factory-reset fix, build/verify scripts) are released under the same LGPL-2.1 terms as the upstream framework. Upstream per-file headers take precedence.
-
-No credentials, server addresses or private tokens are included in this repository.
+CZMao-specific changes (DS22Lite config, 4-layer keymap, 22-LED mapping, factory-reset handling, build/verify scripts) are released under the same LGPL-2.1 terms as the upstream framework. Upstream per-file headers take precedence.
