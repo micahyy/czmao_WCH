@@ -14,8 +14,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* 20:24 修：本文件原先不引入任何配置头，看不见 config.h 里的
- * DYNAMIC_MACRO_ENABLE。砍宏时 #ifdef 为假看不出问题；一旦开回宏，
+/* 本文件需要引入配置头以读取 config.h 里的
+ * DYNAMIC_MACRO_ENABLE。未启用宏时 #ifdef 为假不会暴露问题；启用宏后，
  * dynamic_macro.c（经 quantum.h 能看到开关）会调用 send_char()，而本文件
  * 仍被裁成空壳 -> 链接报 Undefined Global '_send_char'。
  * 必须在 #ifdef 判断之前引入配置。 */
