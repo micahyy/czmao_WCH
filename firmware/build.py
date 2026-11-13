@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""DS22Lite / CH552T 本地构建 —— 复刻 Arduino IDE + ch55xduino 0.0.18 的编译流程。
+"""CH55x_QMK_Lite / CH552 系列本地构建 —— 复刻 Arduino IDE + ch55xduino 0.0.18 的编译流程。
 
-用法：  python build.py            # 全量编译
-        python build.py --clean    # 先清 build/ 再编译
+用法：  python build.py [--board <id>]            # 全量编译（默认取 boards.json 的 default）
+        python build.py [--board <id>] --clean   # 先清产物再编译
+        python build.py --list                   # 列出可用板卡
 
-产物：  build/DS22Lite_CH552T.hex   （可直接给 WCHISPTool / vnproch55x 烧录）
-        build/DS22Lite_CH552T.mem   （ROM / XRAM 占用）
+板卡名称、USB 身份、目录与产物名统一由 boards.json 管理；
+选定板卡后通过 -DBOARD_ID=<directory> 让 keyboards/config_common.h 引入对应配置。
+
+产物：  build/<name>_<chip>.hex   （可直接给 WCHISPTool / vnproch55x 烧录）
+        build/<name>_<chip>.mem   （ROM / XRAM 占用）
 
 工具链在 toolchain/ 里，都是便携包，不需要装 Arduino IDE 或系统级 SDCC：
   sdcc/build.13407_3            SDCC mcs51 编译器
@@ -24,7 +28,14 @@ import subprocess
 import sys
 from pathlib import Path
 
+from board_config import load, parse_board_arg, out_stem
+
 ROOT = Path(__file__).resolve().parent
+MANIFEST, BOARD = load(parse_board_arg())
+NAME = BOARD["name"]
+BOARD_ID = BOARD["directory"]
+OUT = out_stem(BOARD)
+
 TC = ROOT / "toolchain"
 SDCC_BIN = TC / "sdcc" / "bin"
 SDCC = SDCC_BIN / "sdcc.exe"
@@ -38,7 +49,6 @@ LIB_SDCC = TC / "sdcc" / "lib" / "large_int_calc_stack_auto"
 
 BUILD = ROOT / "build"
 OBJ = BUILD / "obj"
-OUT = "DS22Lite_CH552T"
 
 # Arduino IDE 会把 sketch/src 下所有目录都加进 include 路径
 INCS = [ROOT, ROOT / "src", ROOT / "keyboards", CORE_DIR,
@@ -52,6 +62,7 @@ CFLAGS = [
     "-DF_CPU=24000000L", "-DF_EXT_OSC=0L",
     "-DARDUINO=10819", "-DARDUINO_ch55x", "-DARDUINO_ARCH_MCS51",
     "-DUSER_USB_RAM=266",
+    "-DBOARD_ID=" + BOARD_ID,
     # WS2812.h 先 include template/WS2812_pins_header.h 再 include Arduino.h，
     # 头文件里用了 uint32_t 却没有 stdint 上下文。Arduino IDE 编译时会自动
     # 注入 Arduino.h，手工构建用 --include 复刻这一步。
@@ -109,7 +120,7 @@ def patch_core_main() -> Path:
                     end = i + 1
                     break
         if end:
-            text = (text[:m.start()] + "#if 0  /* DS22Lite: 未使用的中断，省 ROM */\n"
+            text = (text[:m.start()] + "#if 0  /* 未使用的中断，省 ROM */\n"
                     + text[m.start():end] + "\n#endif\n" + text[end:])
     dst = BUILD / "patched_core" / "main.c"
     dst.parent.mkdir(parents=True, exist_ok=True)
@@ -134,6 +145,13 @@ def compile_one(src: Path, tag: str, errors: list) -> Path | None:
 
 
 def main() -> int:
+    if "--list" in sys.argv:
+        print("boards.json 中可用板卡（default = %s）：" % MANIFEST["default"])
+        for b in MANIFEST["boards"]:
+            print("  %-14s %-8s %s/%s  -> build/%s"
+                  % (b["id"], b["chip"], MANIFEST["vendorId"], b["productId"], b["hex"]))
+        return 0
+    print("板卡：%s (%s / %s)，产物 build/%s.hex" % (NAME, BOARD["chip"], BOARD_ID, OUT))
     if "--clean" in sys.argv and BUILD.exists():
         # 不整目录删：build/obj 下几百个 .rel/.d 每次编译都会被覆盖重写，
         # 只删最终产物与 .lib 强制重新打包/链接即可。
@@ -191,7 +209,7 @@ def main() -> int:
     print("      %d 个脚位实现 -> optionalLink.lib（链接器按需拉入）" % len(opt_rels))
 
     # 3) sketch src：框架全部 .c 直接参与链接（不进 archive）
-    print("[3/5] 编译 CH55x_QMK_Lite 框架与 DS22Lite 配置 ...")
+    print("[3/5] 编译 CH55x_QMK_Lite 框架与 %s 配置 ..." % NAME)
     for src in sorted((ROOT / "src").rglob("*.c")):
         rel = compile_one(src, "sketch", errors)
         if rel:
