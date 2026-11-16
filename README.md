@@ -1,118 +1,81 @@
 # czmao_WCH
 
-CZMao DS22Lite — a 22-key macro/numpad firmware for **WCH CH552T** (TSSOP20), open-sourced.
+CZMao DS22Lite — a 22-key macro/numpad firmware for **WCH CH552T** (TSSOP20).
 
-CZMao DS22Lite —— 基于 **WCH CH552T**（TSSOP20）的 22 键宏键盘 / 小键盘固件，现已开源。
+CZMao DS22Lite —— 基于 **WCH CH552T**（TSSOP20）的 22 键宏键盘 / 小键盘固件。
 
-Built on `lbtrobit/CH55x_QMK_Lite` + `ch55xduino 0.0.18` + portable SDCC. Supports VIA, 4 layers, 22 WS2812B LEDs and a SignalRGB plugin.
+Current firmware is **v2**: a from-scratch lightweight keyboard firmware that no
+longer depends on the QMK framework. It reuses only the chip SDK (ch55xduino
+core + portable SDCC + WS2812 asm) under `firmware/toolchain/`. The older
+QMK-Lite based v1 has been removed.
 
-基于 `lbtrobit/CH55x_QMK_Lite` + `ch55xduino 0.0.18` + 便携 SDCC 构建，支持 VIA、4 层键位、22 颗 WS2812B 灯，以及 SignalRGB 插件。
+当前固件为 **v2**：从零实现、不依赖 QMK 的轻量固件，只复用 `firmware/toolchain/`
+下的芯片 SDK（ch55xduino core + 便携 SDCC + WS2812 汇编库）。旧的 QMK-Lite v1 已移除。
 
 ## USB identity / USB 身份
 
-VID `0x4A17`, PID `0x4A50`. The VIA definition is available at `micahyy.github.io/czm/definitions/czmao/CH552T/DS22Lite/DS22Lite_via.json`.
+VID `0x4A17`, PID `0x4A51` (Manufacturer `Maiku`, Product `DS22Lite v2`).
+The VIA definition is `firmware/v2/DS22Lite_v2_via.json` (import via the VIA
+Design tab).
 
-VID `0x4A17`，PID `0x4A50`。VIA 定义见 `micahyy.github.io/czm/definitions/czmao/CH552T/DS22Lite/DS22Lite_via.json`。
+VID `0x4A17`，PID `0x4A51`。VIA 定义为 `firmware/v2/DS22Lite_v2_via.json`。
 
 ## Features / 功能
 
-- **MCU**: WCH CH552T, no external crystal, USB device on a 5x5 diode matrix (BAT54C).
-- **主控**：WCH CH552T，无外部晶振，5×5 二极管矩阵（BAT54C）USB 设备。
-- **Layers / 层数**：4 total — Layer 0/1 are VIA-dynamic (stored in DataFlash); Layer 2/3 are compiled-in layouts (return to Layer 0 via `TO(0)`).
-- **层数 / 键位**：共 4 层 —— 层 0/1 为 VIA 动态层（存于 DataFlash），层 2/3 为编译内置键位（按 `TO(0)` 返回层 0）。
-- **VIA**: load `firmware/keyboards/DS22Lite/DS22Lite_via.json` in the VIA Design tab. Factory reset and "Enter bootloader" are available as one-shot buttons.
-- **VIA**：在 VIA Design 页导入 `firmware/keyboards/DS22Lite/DS22Lite_via.json`；「恢复出厂设置」与「进入 Bootloader」为一次性按钮。
-- **RGB**: 22 WS2812B, VIA lighting effects, per-key RGB and the `DS22Lite_signalrgb.js` plugin.
-- **RGB**：22 颗 WS2812B，支持 VIA 灯效、单键 RGB 及 `DS22Lite_signalrgb.js` 插件。
-- **Standard VIA commands / 标准命令**：`0x0A` EEPROM reset, `0x0B` bootloader jump, and the `EE_CLR` / `QK_BOOT` keycodes are supported.
-- **标准 VIA 命令**：支持 `0x0A` 恢复出厂、`0x0B` 进 Bootloader，以及 `EE_CLR` / `QK_BOOT` 键值。
-- **6KRO**: standard boot keyboard report.
-- **6KRO**：标准引导键盘报告。
-- **Media keys / mouse keys / 媒体键 / 鼠标键**：supported / 支持。
+- 4 layers, all VIA-editable; keymap + RGB + macros persist in the 128 B DataFlash.
+- 22 WS2812B LEDs, VIA lighting effects and per-layer colors.
+- Dynamic macros (8 slots), VIA commands `0x0C`~`0x10`, power-off persistent.
+- Media / consumer keys, mouse keys and `F13`~`F21`→mouse, dial HID report.
+- Standard VIA commands `0x0A` (EEPROM reset) and `0x0B` (bootloader jump); `6KRO`.
+- 4 层全部可在 VIA 改；键表 + 灯效 + 宏掉电保持于 128 B DataFlash。
+- 22 颗 WS2812B，VIA 灯效 + 分层配色；动态宏 8 条；媒体键 / 鼠标键 / 拨盘。
 
-## Feature scope / 功能范围
+Not included (by design): Tap Dance, NKRO, encoder / Surface Dial hardware.
 
-The CH552T has limited on-chip ROM and DataFlash, so this firmware implements a focused subset of QMK/VIA. The following desktop-QMK features are not included:
-
-CH552T 片内 ROM 与 DataFlash 有限，固件实现的是 QMK/VIA 的精简子集。以下桌面版 QMK 功能未包含：
-
-| Feature | Status | Note |
-|---|---|---|
-| 宏 Macro (`DYNAMIC_MACRO_ENABLE`) | 未包含 / Not included | 宏数据与回放代码超出片内容量 |
-| 复用键 / Tap Dance | 未包含 / Not included | 同上 |
-| 鼠标宏映射 / FCODE_TO_MOUSE | 未包含 / Not included | 依赖宏功能 |
-| 编码器 / Encoder | 未启用 / Not enabled | 板上未配备 |
-| DIAL / Surface Dial | 未启用 / Not enabled | 板上未配备 |
-| NKRO / 全键无冲 | 未启用 / Not enabled | 使用标准 6KRO 报告 |
-| VIA Macro Loop / Tap Dance 菜单 | 未包含 / Not included | 随对应功能一并省略 |
-
-The VIA macro page is empty and the related menus are absent by design — this is expected, not an error.
-
-VIA 宏页面为空、相关菜单不出现属于预期行为，并非故障。
-
-## Supported features / 支持的功能
-
-| Feature | Status |
-|---|---|
-| VIA 双层动态 + 4 套键位 / VIA dynamic layers + 4 layouts | ✅ |
-| 22 WS2812B RGB + VIA 灯效 + 单键 RGB / 22 WS2812B RGB + VIA lighting + per-key RGB | ✅ |
-| SignalRGB plugin / SignalRGB 插件 | ✅ |
-| 恢复出厂 / 进 Bootloader 按钮 / Factory reset & bootloader buttons | ✅ |
-| 标准 VIA 0x0A / 0x0B + EE_CLR / QK_BOOT | ✅ |
-| 媒体键 / 鼠标键 / Media & mouse keys | ✅ |
-| 层切换与灯效自定义键码 / Custom layer & lighting keycodes | ✅ |
-| 6KRO | ✅ |
+未包含（设计如此）：Tap Dance、NKRO、编码器 / 拨盘硬件。
 
 ## Build (Windows) / 编译
 
-The portable toolchain is included under `firmware/toolchain/`, so no global SDCC install is needed.
-
-便携工具链已包含在 `firmware/toolchain/`，无需另行安装 SDCC。
+The portable toolchain is included under `firmware/toolchain/`, so no global SDCC
+install is needed.
 
 ```powershell
-cd firmware
+cd firmware/v2
 python build.py --clean
 python verify.py
 ```
 
-Output: `firmware/build/DS22Lite_CH552T.hex` (a prebuilt release hex is also included). Current build: ROM 12652 / 14336 B, XRAM 286 / 758 B.
+Output: `firmware/v2/build/DS22Lite_v2.hex` (a prebuilt release hex + `.mem` are
+included). See `firmware/v2/README.md` for build variants and resource usage.
 
-产物：`firmware/build/DS22Lite_CH552T.hex`（仓库内也附预编译 hex）。当前固件：ROM 12652 / 14336 B，XRAM 286 / 758 B。
+产物：`firmware/v2/build/DS22Lite_v2.hex`（仓库内附预编译 hex 与 `.mem`）。
+构建档位与资源占用详见 `firmware/v2/README.md`。
 
 ## Flash / 烧录
 
-1. Hold the bootloader entry condition (short D+ to the specified pad / use the onboard key) while plugging in USB.
-2. Use WCHISPTool or `vnproch55x` to flash `firmware/build/DS22Lite_CH552T.hex`.
-3. Unplug and replug.
+Flash `firmware/v2/build/DS22Lite_v2.hex` with WCHISPTool (or `vnproch55x`).
 
-1. 按住进入 Bootloader 的条件（短接 D+ 到指定焊盘 / 使用板载按键）后插入 USB。
-2. 用 WCHISPTool 或 `vnproch55x` 烧录 `firmware/build/DS22Lite_CH552T.hex`。
-3. 拔出再插入。
+The firmware can enter the CH552 on-chip USB ISP with VIA command `0x0B`
+("进入升级模式"), which does a software `lcall #0x3800` into the ROM bootloader —
+no case opening or pin shorting. Unlike CH582-based boards, CH552 has no BLE /
+dual-bank, so silent drag-and-drop self-flash over WebHID is not supported.
+
+用 WCHISPTool（或 `vnproch55x`）烧录 `firmware/v2/build/DS22Lite_v2.hex`。固件支持
+VIA 命令 `0x0B`「进入升级模式」软件跳转进 CH552 片内 ROM USB ISP，无需开盖 / 短接；
+但 CH552 无 BLE / 双分区，不支持 CH582 那种拖拽文件静默自刷。
 
 ## Layout of this repository / 目录结构
 
 ```
-firmware/src/         QMK-Lite / VIA / RGB / USB HID sources
-firmware/keyboards/   DS22Lite config, VIA JSON, SignalRGB plugin, upstream example keyboards
-firmware/toolchain/   portable SDCC + ch55xduino 0.0.18 (headers, libs, examples, Windows binaries)
-firmware/build/       prebuilt release hex + .mem; obj/ is generated and excluded
-firmware/image/       upstream documentation screenshots
-hardware/             OpenSCAD / PCB / netlist sources (binary STEP, STL and renders are excluded)
-docs/                 feature scope notes and changelog
+firmware/v2/          v2 固件源码、构建/校验脚本、VIA 定义、预编译 hex
+firmware/toolchain/   portable SDCC + ch55xduino + WS2812 (shared build toolchain)
+hardware/             OpenSCAD / PCB / netlist sources (binary STEP/STL excluded)
+docs/                 feature-scope notes and changelog
 ```
-
-`firmware/README.md` is the upstream framework README (kept for reference). `docs/DS22Lite-feature-scope.md` documents the feature scope and hardware limits.
-
-`firmware/README.md` 为上游框架说明（保留参考）。`docs/DS22Lite-feature-scope.md` 说明功能范围与硬件限制。
 
 ## License / attribution / 许可证
 
-This repository redistributes third-party GPL/LGPL code; see `LICENSE` (LGPL-2.1 full text) and `NOTICE.md` for per-component attribution. Upstream file headers remain authoritative.
+This repository redistributes third-party GPL/LGPL code; see `LICENSE` (LGPL-2.1
+full text) and `NOTICE.md`. Upstream file headers remain authoritative.
 
-本仓库再分发第三方 GPL/LGPL 代码；组件归属见 `LICENSE`（完整 LGPL-2.1 文本）与 `NOTICE.md`，上游文件头以原始为准。
-
-## Status / 状态
-
-The firmware builds and passes the bundled static checks. Please open an issue for any problems you encounter.
-
-固件可编译并通过随附的静态检查；使用中遇到问题欢迎提 issue。
+本仓库再分发第三方 GPL/LGPL 代码；见 `LICENSE`（LGPL-2.1 全文）与 `NOTICE.md`。

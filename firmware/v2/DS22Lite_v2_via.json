@@ -1,0 +1,301 @@
+{
+  "name": "DS22Lite v2",
+  "vendorId": "0x4A17",
+  "productId": "0x4A51",
+  "matrix": {
+    "rows": 5,
+    "cols": 5
+  },
+  "layouts": {
+    "keymap": [
+      [
+        "0,0",
+        {
+          "x": 0.25
+        },
+        "0,1",
+        "0,2",
+        "0,3",
+        "0,4"
+      ],
+      [
+        "1,0",
+        {
+          "x": 0.25
+        },
+        "1,1",
+        "1,2",
+        "1,3",
+        {
+          "h": 2
+        },
+        "2,4"
+      ],
+      [
+        "2,0",
+        {
+          "x": 0.25
+        },
+        "2,1",
+        "2,2",
+        "2,3"
+      ],
+      [
+        "3,0",
+        {
+          "x": 0.25
+        },
+        "3,1",
+        "3,2",
+        "3,3",
+        {
+          "h": 2
+        },
+        "4,4"
+      ],
+      [
+        "4,0",
+        {
+          "w": 2,
+          "x": 0.25
+        },
+        "4,1",
+        "4,2"
+      ]
+    ]
+  },
+  "customKeycodes": [
+    {
+      "name": "\u62e8\u76d8\n-",
+      "title": "\u62e8\u76d8\u53cd\u8f6c\uff08DIAL_ENABLE \u5173\u95ed\uff0c\u672c\u677f\u65e0\u6548\uff09",
+      "shortName": "\u62e8\u76d8-"
+    },
+    {
+      "name": "\u62e8\u76d8\n\u6309\u4e0b",
+      "title": "\u62e8\u76d8\u6309\u538b\uff08DIAL_ENABLE \u5173\u95ed\uff0c\u672c\u677f\u65e0\u6548\uff09",
+      "shortName": "\u62e8\u76d8B"
+    },
+    {
+      "name": "\u62e8\u76d8\n+",
+      "title": "\u62e8\u76d8\u6b63\u8f6c\uff08DIAL_ENABLE \u5173\u95ed\uff0c\u672c\u677f\u65e0\u6548\uff09",
+      "shortName": "\u62e8\u76d8+"
+    },
+    {
+      "name": "TO(0)",
+      "title": "\u5207\u6362\u5230\u7b2c 0 \u5c42",
+      "shortName": "TO(0)"
+    },
+    {
+      "name": "TO(1)",
+      "title": "\u5207\u6362\u5230\u7b2c 1 \u5c42",
+      "shortName": "TO(1)"
+    },
+    {
+      "name": "FN(0)",
+      "title": "\u6309\u4f4f\u4e34\u65f6\u7b2c 0 \u5c42",
+      "shortName": "FN(0)"
+    },
+    {
+      "name": "MO(1)",
+      "title": "\u6309\u4f4f\u4e34\u65f6\u7b2c 1 \u5c42\uff08FN \u706f\u53d8\u8272\uff09",
+      "shortName": "MO(1)"
+    },
+    {
+      "name": "TD(0)",
+      "title": "\u505c\u7528\uff1a\u672c\u56fa\u4ef6\u672a\u5b9e\u73b0 Tap Dance",
+      "shortName": "TD(0)"
+    },
+    {
+      "name": "TD(1)",
+      "title": "\u505c\u7528\uff1a\u672c\u56fa\u4ef6\u672a\u5b9e\u73b0 Tap Dance",
+      "shortName": "TD(1)"
+    },
+    {
+      "name": "TD(2)",
+      "title": "\u505c\u7528\uff1a\u672c\u56fa\u4ef6\u672a\u5b9e\u73b0 Tap Dance",
+      "shortName": "TD(2)"
+    },
+    {
+      "name": "TD(3)",
+      "title": "\u505c\u7528\uff1a\u672c\u56fa\u4ef6\u672a\u5b9e\u73b0 Tap Dance",
+      "shortName": "TD(3)"
+    },
+    {
+      "name": "TD(4)",
+      "title": "\u505c\u7528\uff1a\u672c\u56fa\u4ef6\u672a\u5b9e\u73b0 Tap Dance",
+      "shortName": "TD(4)"
+    },
+    {
+      "name": "\u5207\u6362\n\u706f\u6548",
+      "title": "\u5207\u6362\u706f\u6548\u6a21\u5f0f",
+      "shortName": "\u706f\u6548"
+    },
+    {
+      "name": "\u8272\u76f8\n+",
+      "title": "\u8272\u76f8\u589e\u52a0",
+      "shortName": "\u8272\u76f8+"
+    },
+    {
+      "name": "\u8272\u76f8\n-",
+      "title": "\u8272\u76f8\u51cf\u5c0f",
+      "shortName": "\u8272\u76f8-"
+    },
+    {
+      "name": "\u9971\u548c\n+",
+      "title": "\u9971\u548c\u5ea6\u589e\u52a0",
+      "shortName": "\u9971\u548c+"
+    },
+    {
+      "name": "\u9971\u548c\n-",
+      "title": "\u9971\u548c\u5ea6\u51cf\u5c0f",
+      "shortName": "\u9971\u548c-"
+    },
+    {
+      "name": "\u4eae\u5ea6\n+",
+      "title": "\u4eae\u5ea6\u589e\u52a0",
+      "shortName": "\u4eae\u5ea6+"
+    },
+    {
+      "name": "\u4eae\u5ea6\n-",
+      "title": "\u4eae\u5ea6\u51cf\u5c0f",
+      "shortName": "\u4eae\u5ea6-"
+    },
+    {
+      "name": "\u901f\u5ea6\n+",
+      "title": "\u706f\u6548\u901f\u5ea6\u589e\u52a0",
+      "shortName": "\u901f\u5ea6+"
+    },
+    {
+      "name": "\u901f\u5ea6\n-",
+      "title": "\u706f\u6548\u901f\u5ea6\u51cf\u5c0f",
+      "shortName": "\u901f\u5ea6-"
+    },
+    {
+      "name": "TO(2)",
+      "title": "\u5207\u6362\u5230\u7b2c 2 \u5c42\uff08VIA \u53ef\u7f16\u8f91\uff09",
+      "shortName": "TO(2)"
+    },
+    {
+      "name": "TO(3)",
+      "title": "\u5207\u6362\u5230\u7b2c 3 \u5c42\uff08VIA \u53ef\u7f16\u8f91\uff09",
+      "shortName": "TO(3)"
+    },
+    {
+      "name": "FN(2)",
+      "title": "\u6309\u4f4f\u4e34\u65f6\u7b2c 2 \u5c42\uff08FN \u706f\u53d8\u8272\uff09",
+      "shortName": "FN(2)"
+    },
+    {
+      "name": "FN(3)",
+      "title": "\u6309\u4f4f\u4e34\u65f6\u7b2c 3 \u5c42\uff08FN \u706f\u53d8\u8272\uff09",
+      "shortName": "FN(3)"
+    }
+  ],
+  "menus": [
+    {
+      "label": "\u706f\u5149",
+      "content": [
+        {
+          "label": "\u80cc\u5149",
+          "content": [
+            {
+              "label": "\u706f\u6548",
+              "type": "dropdown",
+              "content": [
+                "id_qmk_rgb_matrix_effect",
+                3,
+                2
+              ],
+              "options": [
+                "\u5168\u5173",
+                "\u5355\u8272",
+                "\u5168\u5c40\u5faa\u73af",
+                "\u5de6\u53f3\u5faa\u73af",
+                "\u4e0a\u4e0b\u5faa\u73af",
+                "\u5f69\u8679\u6d41\u52a8",
+                "\u8272\u76f8\u6ce2\u6d6a"
+              ]
+            },
+            {
+              "showIf": "{id_qmk_rgb_matrix_effect} != 0 ",
+              "label": "\u4eae\u5ea6",
+              "type": "range",
+              "options": [
+                0,
+                255
+              ],
+              "content": [
+                "id_qmk_rgb_matrix_brightness",
+                3,
+                1
+              ]
+            },
+            {
+              "showIf": "{id_qmk_rgb_matrix_effect} != 0 && {id_qmk_rgb_matrix_effect} != 1 ",
+              "label": "\u706f\u6548\u901f\u5ea6",
+              "type": "range",
+              "options": [
+                0,
+                255
+              ],
+              "content": [
+                "id_qmk_rgb_matrix_effect_speed",
+                3,
+                3
+              ]
+            },
+            {
+              "showIf": "{id_qmk_rgb_matrix_effect} != 0 ",
+              "label": "\u989c\u8272",
+              "type": "color",
+              "content": [
+                "id_qmk_rgb_matrix_color",
+                3,
+                4
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "\u7cfb\u7edf",
+      "content": [
+        {
+          "label": "\u6062\u590d\u51fa\u5382\u8bbe\u7f6e",
+          "content": [
+            {
+              "label": "\u6062\u590d\u51fa\u5382\u9ed8\u8ba4\u8bbe\u7f6e",
+              "type": "button",
+              "options": [
+                1
+              ],
+              "content": [
+                "id_system_eeprom_reset",
+                6,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "label": "\u66f4\u65b0\u56fa\u4ef6",
+          "content": [
+            {
+              "label": "\u8fdb\u5165\u5347\u7ea7\u6a21\u5f0f",
+              "type": "button",
+              "options": [
+                1
+              ],
+              "content": [
+                "id_system_bootloader_jump",
+                6,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
